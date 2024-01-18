@@ -1,0 +1,93 @@
+/*-------------------------------------------------------  N a v b a r  ------------------------------------------*/
+.Navbar{
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px #dbdbdb;
+    align-items: center;
+    padding: 0.7vw;
+    position: sticky;
+    z-index: 9;
+    top: 0;
+    background: white;
+    box-shadow: 0px -5px 13px 0px #a0a0a0;
+    z-index: 99;
+}
+.Navbar_li{
+    color: var(--grey);
+    padding: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.Navbar_li_active{
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--red);
+}
+.Image_Container{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Routes_Container{
+    gap: 2%;
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    position: relative;
+}
+.Control_Container{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Navbar_logo{
+    width: 7rem;
+}
+.Download_App{
+    font-weight: bold;
+    color: var(--red);
+    font-size: 1rem;
+    cursor: pointer;
+}
+#Register_Btn{
+    background: var(--red);
+    color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 9px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+@media screen  and (max-width:1100px){
+    .Routes_Container{
+        display: none;
+    }
+    .Navbar {
+        justify-content: space-between;
+    }
+    .Control_Container {
+        width: 100%;
+        justify-content: end;
+    }
+}
+
+@media screen  and (max-width:500px){
+    .Navbar_logo{
+        width: 5rem;
+    }
+    .Download_App {
+        font-size: 0.9rem;
+    }
+    #Register_Btn {
+        font-size: 1rem;
+    }
+}

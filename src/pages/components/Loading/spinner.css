@@ -1,0 +1,126 @@
+/* spinner.css */
+.spinner-backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    direction: ltr;
+    z-index: 9;
+    overflow: hidden;
+  }
+  
+  .spinner {
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -80px;
+    z-index: 100;
+    direction: ltr;
+  }
+  
+  .spinner.spinner-circle {
+    border-top: 4px rgb(81 81 81) solid;
+    border-radius: 60%;
+    animation: animate 0.9s infinite linear;
+  }
+  
+  @-webkit-keyframes animate {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(359deg);
+    }
+  }
+  
+  @keyframes animate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  
+  .blur_background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ffffff99;
+    z-index: 1;
+    top: 0;
+    transform: translate(0px, 0px);
+    direction: ltr; /* Set text direction to left-to-right */
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+  
+  .waviy {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjusted to center both horizontally and vertically */
+    z-index: 100;
+    direction: ltr; /* Set text direction to left-to-right */
+  }
+  
+  .waviy span {
+    font-family: 'Alfa Slab One', sans-serif; /* Imported font */
+    font-weight: 100;
+    position: relative;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    animation: waviy 2s infinite;
+    animation-delay: calc(.1s * var(--i));
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+  }
+  
+  @keyframes waviy {
+    0%, 40%, 100% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-20px);
+    }
+  }
+  /* spinner.css */
+
+/* spinner.css */
+
+.spinner-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    background-color: rgb(109 109 109 / 24%);
+    transition: opacity 0.5s ease, visibility 0.5s ease, background-color 0.5s ease;
+    backdrop-filter: saturate(0);
+}
+  
+  .spinner-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0); /* Set background color to transparent when hidden */
+  }
+  
+  /* Add these keyframes to your existing CSS */
+@keyframes flagAnimation {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.4);
+    }
+  }
+  

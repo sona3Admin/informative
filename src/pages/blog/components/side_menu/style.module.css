@@ -1,0 +1,26 @@
+#side_li{
+    padding: 20px;
+    color: black;
+    font-size: 1.2rem;
+    border-bottom: solid 1px lightgrey;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+#side_li_active{
+    padding: 20px;
+    color: var(--red);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border-bottom: solid 1px lightgrey;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.links_ul{
+    display: grid;
+    width: 100%;
+}
+
+.btn{}

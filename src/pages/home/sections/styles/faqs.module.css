@@ -1,0 +1,38 @@
+.section{
+    justify-content: center;
+    padding: 140px;
+    padding-top: 0;
+}
+.Header{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.s_line{
+    object-fit: scale-down;
+}
+.h1{
+    font-size: 2.2rem;
+    font-weight: bolder;
+    text-align: center;
+}
+#Button{
+    height: 50px;
+    width: 35%;
+    background: var(--red);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#Button:hover{
+    box-shadow: 0px 8px 8px grey;
+    transform: translateY(-3px);
+}
+@media screen  and (max-width:1100px){
+    .section{ padding: 10px; smargin-bottom: 80px; }
+    .h1{ font-size: 1.6rem; }
+    .Header { margin-bottom: 0px; margin-top: 0px; }
+}

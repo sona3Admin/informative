@@ -1,0 +1,9 @@
+#LangBadge_BTN{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: max-content;
+    border: none;
+    height: 56px;
+}
+.image_lang{ width: 2em; }

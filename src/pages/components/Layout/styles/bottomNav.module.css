@@ -1,0 +1,44 @@
+.BottomNav{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    z-index: 99999;
+    background: white;
+    width: 100%;
+    justify-content: center;
+}
+.li{
+    padding: 7px;
+    width: 25%;
+    border-top: solid 1px rgb(200, 200, 200);
+    border-left: solid 1px #cfcfcf;
+    text-align: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    justify-content: center;
+    display: block!important;
+    background: white;
+    color: black;
+}
+.active_tab{
+    padding: 7px;
+    width: 25%;
+    border-top: solid 5px var(--red);
+    border-left: solid 1px #727272;
+    text-align: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    justify-content: center;
+    display: block!important;
+    background: #e4e4e4;
+    color: var(--red);
+}
+
+.text{
+    font-size: 0.65rem;
+    font-weight: bold;
+    margin-top: -10px;
+}
+.icon{
+    font-size: 1.7rem;
+}
