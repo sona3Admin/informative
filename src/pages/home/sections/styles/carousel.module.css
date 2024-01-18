@@ -91,7 +91,7 @@
     }
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:570px) {
     .username {
         bottom: 0;
         margin: 50px;
