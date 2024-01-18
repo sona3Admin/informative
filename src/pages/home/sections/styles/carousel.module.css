@@ -92,6 +92,19 @@
 }
 
 @media screen and (max-width:450px) {
+    .username {
+        bottom: 0;
+        margin: 50px;
+        position: relative;
+        width: -webkit-max-content;
+        width: max-content;
+        width: 50%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media screen and (max-width:450px) {
     .Header {
         font-size: 0.9rem;
         margin-bottom: 20px;
