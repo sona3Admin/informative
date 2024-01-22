@@ -19,7 +19,9 @@ useApi(600)
 const {t,i18n} = useTranslation()
 const[Type, setType] = useState('monthly')
 const[matches,setMatches] = useState(window.matchMedia("(min-width: 1500px)").matches)
+const[matches2,setMatches2] = useState(window.matchMedia("(min-width: 570px)").matches)
 useEffect(() => {const handler = (e) => setMatches( e.matches ); window.matchMedia("(min-width: 1500px)").addListener(handler);},[])
+useEffect(() => {const handler2 = (e) => setMatches2( e.matches ); window.matchMedia("(min-width: 570px)").addListener(handler2);},[])
 const splideRef = useRef(null);
 useEffect(() => {
   const splideInstance = splideRef.current?.splide;
@@ -44,13 +46,14 @@ useEffect(() => {
           <img className={style.s_line} src={s_line} alt="Who we are" />
         </div>
         <div className={style.p}>{t("Flexible price packages that provide you with a variety of options and features")}</div>
-      
-        <div className={style.buttons}>
-          <Button className={ Type === "monthly" ? style.button_active : style.button } onClick={()=>{setType("monthly"); }} >{t("Monthly")}</Button>
-          <Button className={ Type === "annually" ? style.button_active : style.button } onClick={()=>{setType("annually");}} >{t("Annually")}</Button>
-          <div className={style.sub_notice}>
-            <div className={style.notice_text}>{t("Save 56% with the annual plan")}</div>
-            <img src={arrow} className={style.arrow} alt="arrow"/>
+        <div className={style.buttons_container} style={{left:i18n.language === 'en' ? "70px" : "auto", right:i18n.language === 'ar' ? "70px" : "auto"}}>
+          <div className={style.buttons}>
+            <Button className={ Type === "monthly" ? style.button_active : style.button } onClick={()=>{setType("monthly"); }} >{t("Monthly")}</Button>
+            <Button className={ Type === "annually" ? style.button_active : style.button } onClick={()=>{setType("annually");}} >{t("Annually")}</Button>
+          </div>
+          <div className={style.sub_notice} >
+              <div className={style.notice_text} style={{left:i18n.language === 'en' ? "-30px" : "auto", right:i18n.language === 'ar' ? "-30px" : "auto"}}>{t("Save 56% with the annual plan")}</div>
+              <img src={arrow} className={style.arrow} style={{transform:i18n.language==='en' ? 'scaleX(-1)': 'scaleX(1)'}} alt="arrow"/>
           </div>
         </div>
         {/* Start of Cards */}

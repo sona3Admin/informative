@@ -31,7 +31,7 @@ useEffect(() => {
                  </div>
               )}
           </div>
-          <EndBanner/>
+          <EndBanner color={"rgba(136, 5, 13, 1)"}/>
       </div>
     </div>
   )

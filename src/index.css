@@ -87,3 +87,17 @@ ol {
 :where(.css-dev-only-do-not-override-dkbvqv).ant-breadcrumb a {
   height: auto!important;
 }
+
+:where(.css-dkbvqv).ant-breadcrumb a {
+  height: 100%!important;
+}
+.ant-collapse-content.ant-collapse-content-active {
+  border-bottom: none!important;
+  border-radius: 0px!important;
+  border-top: none!important;
+}
+.ant-collapse-content.ant-collapse-content-active{
+  border-bottom: none!important;
+  border-radius: 0px!important;
+  border-top: none!important;
+}

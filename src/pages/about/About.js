@@ -16,9 +16,9 @@ export default function About() {
  useApi(600)
  const{t,i18n} = useTranslation()
  const data = [
-  {name:"بائع نشط", number:"3000",background:"rgba(136, 5, 13, 1)"},
-  {name:"منتج تم بيعه", number:"2000",background:"rgba(223, 144, 25, 1)"},
-  {name:"زائر يومياً", number:"30000",background:"rgba(10, 128, 106, 1)"},
+  {name:"Active Seller", number:"3000",background:"rgba(136, 5, 13, 1)"},
+  {name:"Sold Product", number:"2000",background:"rgba(223, 144, 25, 1)"},
+  {name:"Daily vistors", number:"30000",background:"rgba(10, 128, 106, 1)"},
 ]
   return (
     <div>

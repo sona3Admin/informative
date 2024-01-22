@@ -45,6 +45,13 @@
     gap: 15px;
 }
 
+.buttons_container{
+    position: relative;
+    display: flex;
+    margin: 0% auto;
+    justify-content: center;
+    margin-bottom: 0px;
+}
 
 .buttons{
     width: max-content;
@@ -56,7 +63,6 @@
     padding-bottom: 5px;
     display: flex;
     gap: 25px;
-    margin: 50% auto;
     margin-top: 70px;
     margin-bottom: 10px;
 }
@@ -65,7 +71,7 @@
     display: inline-flex;
     align-self: center;
     border: none;
-    width: 170px;
+    width: 200px;
     height: 28px;
     justify-content: center;
     font-size: 1rem;
@@ -79,7 +85,7 @@
     display: inline-flex;
     align-self: center;
     border: none;
-    width: 170px;
+    width: 300px;
     height: 28px;
     color: var(--red)!important;
     justify-content: center;
@@ -93,20 +99,20 @@
     background: rgb(96, 25, 25) !important;
 }
 #Button{
+    width: 200px;
     background: white;
     color: var(--red);
 }
 .sub_notice{
-    position: absolute;
-    margin-left: 30px;
-    margin-right: 370px;
-    margin-top: -61px;
+    position: relative;
+    top: 15px;
 }
 .notice_text{
     width: 100px;
     color: var(--green);
     font-weight: 600;
     margin: 20px;
+    position: relative;
 }
 .arrow{
 
@@ -303,11 +309,9 @@
 
 @media screen and (max-width:680px) {
     .buttons {
-        width: 35%;
+        width: 50%;
     }
-    .sub_notice{
-        margin-right: 36vw;
-    }
+
 }
 @media screen and (max-width:500px) {
     .p{    

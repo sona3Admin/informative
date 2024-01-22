@@ -24,18 +24,37 @@
     margin-bottom: 0;
 }
 .content{
-    padding: 190px;
-    margin-top: -170px;
+    padding: 100px;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    margin: 0% auto;
+    margin-top: -50px;
 }
 .Select{
     margin-bottom: 20px;
+    width: 30%;
+}
+.Select_Li{
+    padding: 19px;
+    margin-top: -10px;
+    cursor: pointer;
 }
 .expands{
+    width: 100%;
 }
 @media screen  and (max-width:1100px){
     .section{ padding: 10px; smargin-bottom: 80px; }
     .h1{ font-size: 1.6rem; }
     .Header { margin-bottom: 0px; margin-top: 0px; }
+}
+@media screen  and (max-width:950px){
+    .content {
+        display: block;
+    }
+    .Select {
+        width: 100%;
+    }
 }
 @media screen  and (max-width:800px){
     .content{
