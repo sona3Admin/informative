@@ -98,7 +98,7 @@
     gap: 2%;
 }
 .line_data_li{
-    cursor: pointer;
+    cursor: default;
     display: flex;
     gap: 3px;
     align-items:center;

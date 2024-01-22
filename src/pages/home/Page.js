@@ -20,7 +20,7 @@ useApi(600)
         <News/>
         <Faqs/>
         <Carousel/>
-        <EndBanner/>
+        <EndBanner color={"#88050D"}/>
     </div>
   )
 }

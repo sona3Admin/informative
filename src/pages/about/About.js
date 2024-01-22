@@ -9,6 +9,8 @@ import icon_2 from './../../assets/icon_2.png'
 import Medal from './../../assets/Medal.png'
 import { convertToArabicNumeral } from './../../utils/functions'
 import Services from '../home/sections/Services'
+import EndBanner from './../home/sections/EndBanner';
+import BreadCrumb from './../components/Layout/BreadCrumb';
 
 export default function About() {
  useApi(600)
@@ -21,6 +23,7 @@ export default function About() {
   return (
     <div>
         <img className={style.image_h_line} src={h_line} alt='h_line'/>
+        <BreadCrumb/>
         <div className={style.header}  >
               <img className={style.s_line} src={s_line} alt="Who we are" />
               <h1 className={style.header_h}>{t("Who we are ?")}</h1>
@@ -64,6 +67,7 @@ export default function About() {
             </div>
           </div>
           <Services/>
+          <EndBanner color={"#88050D"}/>
     </div>
   )
 }

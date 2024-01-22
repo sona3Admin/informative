@@ -24,8 +24,8 @@ const{t} = useTranslation()
           <NavLink to="/support" className={activeClassName("/support")} >{t("Support")}</NavLink>
         </div>
         <div className={style.Control_Container}>
-          <div onClick={()=>{window.open(`https://www.instagram.com/sona3app/`, '_blank')}} className={style.Download_App}>{t("Download App")}</div>
-          <Button id={style.Register_Btn} onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} >{t("Register Now")}</Button>
+          <div onClick={()=>{window.open(`https://play.google.com/store/`, '_blank')}} className={style.Download_App}>{t("Download App")}</div>
+          <Button id={style.Register_Btn}>{t("Register Now")}</Button>
           <LangDropDown/>
         </div>
     </div>

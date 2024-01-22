@@ -75,23 +75,23 @@ export default function Pricing() {
       <Splide  aria-label="My Favorite Images" className="splide"
        ref={splideRef}
        style={{ overflow: 'hidden' }} 
-        options={ {
-            start:0,
-            rewind : false,
-            width  : '100%',
-            gap    : '1rem',
-            perPage: 3,
-            direction: i18n.language === 'en' ? 'ltr' : 'rtl',
-            //lazyLoad: 'nearby',
-            //drag   : 'free',
-            focus  : 'center',
-            //type:'loop',
-            breakpoints: {
-              1024: { perPage: 2, },
-              767: { perPage: 1, },
-              640: { perPage: 1, },
-              },
-          }
+       options={ {
+        start:0,
+        rewind: false,
+        width: '100%',
+        gap: '1rem',
+        arrows:false,
+        perPage: 3,
+        focus  : 'center',
+        direction: i18n.language === 'en' ? 'ltr' : 'rtl',
+        //lazyLoad: 'nearby',
+        //drag   : 'free',
+        //type:'loop',
+        breakpoints: {
+          767: { perPage: 1, arrows:true, },
+          640: { perPage: 1, arrows:true, },
+          },
+      }
         }
         >
           {Packages.map((items,key)=>

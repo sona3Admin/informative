@@ -20,15 +20,70 @@ body {
 }
 
 ul.splide__pagination.splide__pagination--rtl {
-  margin-top: 50px !important;
+  margin-top: 0px !important;
   position: relative!important;
 }
 ul.splide__pagination.splide__pagination--ltr{
-  margin-top: 50px !important;
+  margin-top: 0px !important;
   position: relative!important;
 }
 
 button.splide__pagination__page.is-active {
   color: var(--red)!important;
   background-color: var(--red)!important;
+}
+
+.ant-collapse.ant-collapse-icon-position-start.css-dev-only-do-not-override-dkbvqv {
+  background: transparent!important;
+  border: none!important;
+  border-bottom: none!important;
+  border-radius: 0px!important;
+  box-shadow: none!important;
+}
+.ant-collapse.ant-collapse-icon-position-start.css-dkbvqv{
+  background: transparent!important;
+  border: none!important;
+  border-bottom: none!important;
+  border-radius: 0px!important;
+  box-shadow: none!important;
+}
+
+.ant-collapse-content.ant-collapse-content-active {
+  border-bottom: none!important;
+  border-radius: 0px!important;
+}
+.ant-collapse-content.ant-collapse-content-active{
+  border-bottom: none!important;
+  border-radius: 0px!important;
+}
+:where(.css-dev-only-do-not-override-dkbvqv).ant-collapse>.ant-collapse-item:last-child, :where(.css-dev-only-do-not-override-dkbvqv).ant-collapse>.ant-collapse-item:last-child>.ant-collapse-header {
+  border-radius: 0px!important;
+}
+:where(.css-dkbvqv).ant-collapse>.ant-collapse-item:last-child, :where(.css-dkbvqv).ant-collapse>.ant-collapse-item:last-child>.ant-collapse-header {
+  border-radius: 0px!important;
+}
+button.splide__arrow.splide__arrow--next {
+  font-size: 1.4rem;
+  background: white;
+}
+button.splide__arrow.splide__arrow--prev {
+  font-size: 1.4rem;
+  background: white;
+}
+
+.splide__arrow svg {
+  fill: #84050d!important;
+  height: 1.2em!important;
+  width: 1.2em!important;
+}
+ol {
+  text-align: center!important;
+  justify-content: center!important;
+  position: relative!important;
+  top: 10px!important;
+  font-size: 1.15rem!important;
+  cursor: pointer!important;
+}
+:where(.css-dev-only-do-not-override-dkbvqv).ant-breadcrumb a {
+  height: auto!important;
 }

@@ -37,15 +37,15 @@ export default function Carousel() {
             start:0,
             rewind : false,
             width  : '100%',
-            gap: '1rem',
+            gap: '2rem',
             perPage: 2,
             direction: i18n.language === 'en' ? 'ltr' : 'rtl',
             lazyLoad: 'nearby',
            // drag   : 'free',
-            //focus  : 'center',
+           //focus  : 'center',
             //type:'loop',
             breakpoints: {
-                1240: {
+                940: {
                   perPage: 1,
                  
                 },

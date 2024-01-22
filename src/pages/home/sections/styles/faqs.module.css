@@ -20,7 +20,10 @@
 }
 #Button{
     height: 50px;
-    width: 35%;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5px;
     background: var(--red);
     color: white;
     border: none;

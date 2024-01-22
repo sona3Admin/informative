@@ -50,7 +50,7 @@
     transition: all 0.3s ease-in-out;
 }
 .card:hover{
-    transform: scale(1);
+    transform: scale(0.93);
 }
 .pricing_content{
     border-bottom: solid 2px grey;
@@ -128,6 +128,7 @@
     align-items: center;
     gap: 5px;
     margin-top: 10px;
+    box-shadow: none;
 }
 .Card_Btn:hover{
     color: black!important;
@@ -154,12 +155,9 @@
     border: solid 3px var(--green);
     background: var(--paige);
     font-weight: bolder;
-    transform: scale(0.98);
     transition: all 0.3s ease-in-out;
 }
-#Best:hover{
-    transform: scale(1);
-}
+
 .best_selling{
     position: relative;
     top: -22px;

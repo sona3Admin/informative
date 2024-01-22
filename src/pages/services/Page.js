@@ -9,6 +9,8 @@ import { Button } from 'antd'
 import { CheckOutlined } from '@ant-design/icons'
 import Faqs from '../home/sections/Faqs'
 import Data from '../../DummyData/Data'
+import EndBanner from './../home/sections/EndBanner';
+import BreadCrumb from '../components/Layout/BreadCrumb'
 
 export default function Services() {
 useApi(600)
@@ -22,16 +24,19 @@ useEffect(() => {const handler = (e) => setMatches( e.matches ); window.matchMed
   return (
     <div>
       <img className={style.image_h_line} src={h_line} alt='h_line' />
+      <BreadCrumb/>
       <div className={style.header} >
         <img className={style.s_line} src={s_line} alt="Who we are" />
           <h1 className={style.h1}>{t("Our Services")}</h1>
         <img className={style.s_line} src={s_line} alt="Who we are" />
       </div>
       <div className={style.p}>{t("We use the latest data analysis tools to understand customer behavior and develop marketing strategies that fit your business needs.")}</div>
-      <div className={style.p}>{t("Our Service To")}</div>
-      <div className={style.buttons}>
-        <Button className={ serviceType === "sellers" ? style.button_active : style.button } onClick={()=>{setServiceType("sellers"); setData(sellerData)}} >{t("Sellers")}</Button>
-        <Button className={ serviceType === "customers" ? style.button_active : style.button } onClick={()=>{setServiceType("customers");setData(customerData)}} >{t("Customers")}</Button>
+      <div className={style.service_to_div}>
+        <div className={style.p}>{t("Our Service To")}</div>
+        <div className={style.buttons}>
+          <Button className={ serviceType === "sellers" ? style.button_active : style.button } onClick={()=>{setServiceType("sellers"); setData(sellerData)}} >{t("Sellers")}</Button>
+          <Button className={ serviceType === "customers" ? style.button_active : style.button } onClick={()=>{setServiceType("customers");setData(customerData)}} >{t("Customers")}</Button>
+        </div>
       </div>
       <div className={style.Cards} >
         {ServicesData.map((items,key)=>
@@ -56,6 +61,7 @@ useEffect(() => {const handler = (e) => setMatches( e.matches ); window.matchMed
         )}
         <Faqs/>
       </div>
+      <EndBanner color={"rgba(10, 128, 106, 1)"}/>
     </div>
   )
 }

@@ -43,24 +43,24 @@ export default function News() {
             start:0,
             rewind : false,
             width  : '100%',
-            gap    : '1rem',
-            perPage: 5,
+            padding: 80,
+            gap:'4rem',
+            perPage: 4,
             direction: i18n.language === 'en' ? 'ltr' : 'rtl',
             lazyLoad: 'nearby',
-            drag   : 'free',
-            //focus  : 'center',
+           // drag   : 'free',
+            focus  : 'center',
             //type:'loop',
             breakpoints: {
-              1024: {
-                  perPage: 5,
-                 
-                },
-                767: {
-                  perPage: 4,
-              
+              1100: {
+                  perPage: 3,
+                  gap:'1rem',
+                  padding: 0,
                 },
                 640: {
                   perPage: 2,
+                  gap:'1rem',
+                  padding: 0,
                 },
               },
           
