@@ -73,7 +73,7 @@
 }
 .line_text_bold{
     font-weight: bolder;
-    font-family: ui-sans-serif;
+    color: var(--brown);
 }
 .icon{
     height: 2rem;

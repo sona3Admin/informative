@@ -6,6 +6,7 @@ import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import s_line from '../../../assets/s_line.png'
 import { useNavigate } from 'react-router-dom';
 import { common_q } from '../../../DummyData/Data';
+import Header1 from './../../../common/Header1';
 const { Panel } = Collapse;
 export default function Faqs() {
   const{t} = useTranslation()
@@ -20,7 +21,7 @@ export default function Faqs() {
     <div className={style.section}>
       <div className={style.Header} >
         <img className={style.s_line} src={s_line} alt="Sona3 News" />
-        <h1 className={style.h1}>{t("Common Questions")}</h1>
+        <Header1 classname={style.h1} text="Common Questions"/>
         <img className={style.s_line} src={s_line} alt="Sona3 News"/>
       </div>
       <Collapse accordion expandIcon={customExpandIcon}  >

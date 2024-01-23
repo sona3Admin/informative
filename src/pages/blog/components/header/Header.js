@@ -20,10 +20,11 @@ useEffect(() => {const handler = (e) => setMatches( e.matches ); window.matchMed
           <div className={style.header_p}>{t("Sona3 App blog articles help grow your project and increase your sales")}</div>
         </div>
         {matches && <div className={style.blog_nav}>
-              <div className={style.blog_nav_li} id={style.Topics}>{t("Topics")}</div>
-              <NavLink to="/blog"  className={activeClassName("/blog")}>{t("Home")}</NavLink>
+              <div className={style.blog_nav_li} id={style.Topics}>{t("Topics")}:</div>
+              {/* <NavLink to="/blog"  className={activeClassName("/blog")}>{t("Home")}</NavLink> */}
               <NavLink to="/blog/e-commerce"  className={activeClassName("/blog/e-commerce")}>{t("E-Commerce")}</NavLink>
               <NavLink to="/blog/jobs"        className={activeClassName("/blog/jobs")}>{t("Jobs")}</NavLink>
+              <NavLink to="/blog/jobs"        className={activeClassName("/blog/jobs")}>{t("Top Jobs")}</NavLink>
               <NavLink to="/blog/crafts"      className={activeClassName("/blog/Crafts")}>{t("Crafts")}</NavLink>
               <NavLink to="/blog/sona3-app"   className={activeClassName("/blog/sona3-app")}>{t("Sona3 App")}</NavLink>
         </div>}

@@ -37,10 +37,10 @@
         "Saves time & money":"يوفر الوقت والمال",
         "Platform for handicrafts":"منصة متكاملة للحرف اليدوية",
         "24/7 Technical Support":"خدمة عملاء 24 ساعة",
-        "Who we are ?" : "من نحن",
+        "About Sona3" : "عن صُناع",
         "The largest platform for every maker and innovator in the UAE" : " أضخم منصة حاضنة لكل صانع ومبدع على أرض الإمارات ",
-        "Welcome to “Sona3”, the platform that combines art and craftsmanship to provide the most amazing products that reflect creativity and beauty. We offer many handmade products that have been crafted with care and expertise by talented craftsmen." : "مرحبًا بك في “صُناع“، المنصة التي تجمع بين الفن والحرفية تقدم أروع المنتجات التي تحظى بتقدير الإبداع والجمال. نقدم مجموعة واسعة من المنتجات المصنوعة يدويًا والتي تم تصنيعها بعناية وخبرة عالية من قبل محترفين موهوبين.",
-        "You'll find a diverse range of products, ":"نهتم بالتفاصيل والجودة، ",
+        "Welcome to “Sona3”, the platform that combines art and craftsmanship to provide the most amazing products that reflect creativity and beauty. We offer many handmade products that have been crafted with care and expertise by talented craftsmen." : "مرحبًا بك في ”صُناع”، المنصة التي تجمع بين الفن والحرفية لتقديم أروع المنتجات التي تعكس الإبداع والجمال نجمع بين مجموعة واسعة من المنتجات اليدوية التي تم صنعها بعناية وخبرة عالية من قبل حرفيين موهوبين.",
+        "You'll find a diverse range of products, ":"ستجد لدينا تشكيلة متنوعة من المنتجات، ",
         "from traditional handicrafts to contemporary designs inspired by contemporary art.":" بدءً من الحرف اليدوية التقليدية وصولًا إلى التصاميم العصرية المستوحاة من الفن المعاصر. ",
         "We care about details and quality, ":"نهتم بالتفاصيل والجودة, ",
         "so we only work with experienced craftsmen who have exceptional skills in creating unique products, ":"لذلك نعمل فقط مع الحرفيين ذوي الخبرة الذين يتمتعون بمهارات استثنائية في صنع المنتجات الفريدة.",
@@ -65,8 +65,9 @@
         "We strive to provide a comfortable and enjoyable shopping experience for our customers, where they can explore and purchase our products with ease, and in case of any questions or problems, our support team is always ready to help you and provide quick solutions.":"نسعى جاهدين لتوفير تجربة تسوق مريحة وممتعة لعملائنا، حيث يمكنهم استكشاف وشراء منتجاتنا بكل سهولة، وفي حالة وجود أي استفسار أو مشكلات فإن فريق الدعم لدينا مستعد دائمًا لمساعدتك وتقديم الحلول السريعة.",
         "Various payment options":"خيارات دفع متنوعة",
         "We are keen to provide diverse and secure payment options to our customers. We also offer innovative and reliable payment interfaces that include options such as payment via credit cards, direct debit, and bank transfers":"نحرص على توفير خيارات دفع متنوعة وآمنة لعملائنا، كما نقدم واجهات دفع مبتكرة وموثوقة تتضمن خيارات مثل الدفع عبر البطاقات الائتمانية والخصم المباشر، والتحويل البنكي.",
-        "technical support":"دعم فني",
+        "24/7 technical support":"دعم فني 24/7",
         "hour":"ساعة",
+        "terms-conditions":"الشروط والأحكام",
         "Control panel to display statistics":"لوحة تحكم لعرض الاحصائيات",
         "Appears on the home page of the site":"الظهورة في الصفحة الرئيسية للموقع",
         "All social media platforms":"جميع منصات التواصل الاجتماعي",
@@ -78,6 +79,7 @@
         "Save":"وفر",
         "AED":"د.إ",
         "month":"شهر",
+        "Load More":"تحميل المزيد",
         "Subscribe Now":"احصل عليها الان",
         "Daily appearance on the homepage": "الظهور اليومي على الصفحة الرئيسية",
         "Free marketing on social media": "التسويق المجاني على وسائل التواصل الاجتماعي",
@@ -96,7 +98,8 @@
         "Topics":"الاقسام",
         "Products":"المنتجات",
         "Sona3 App":"تطبيق صناع",
-        "Jobs":"الوظائف",
+        "Jobs":"الحرف",
+        "Top Jobs":"افضل الحرف",
         "Crafts":"الحرف اليدوية",
         "E-Commerce":"التجارة الالكترونية",
         "Sona3 App blog articles help grow your project and increase your sales":"تساعد مقالات مدونة تطبيق صناع في تنمية مشروعك و زيادة مبيعاتك",
@@ -142,7 +145,39 @@
         "support":"الدعم",
         "about":"من نحن",
         "Send":"ارسال",
+        "Read":"اقرأ",
+        "blog":"المدونة",
         "faqs":"الاسئلة الشائعة",
-        "Save 56% with the annual plan":"وفر 56% مع الخطة السنوية"
-
+        "Save 56% with the annual plan":"وفر 56% مع الخطة السنوية",
+        "privacy-policy":"السياسة و الخصوصية",
+        "We are keen to provide diverse and secure payment options to our customers. We also offer innovative and reliable payment interfaces that include options such as payment via credit cards, direct debit, and bank transfer.":"نحن حريصون على توفير خيارات دفع متنوعة وآمنة لعملائنا. كما نقدم أيضًا واجهات دفع مبتكرة وموثوقة تتضمن خيارات مثل الدفع عن طريق بطاقات الائتمان والخصم المباشر والتحويل المصرفي.",
+        "Shipment tracking":"تتبع الشحنة",
+        "The application allows customers to easily track shipments. Once the order is shipped, customers are provided with tracking information to know the status of the shipment and its current location. This feature allows customers to follow the product’s journey until it reaches their destination.":"التطبيق يسمح للعملاء بتتبع الشحنات بسهولة. بمجرد شحن الطلب، يتم تزويد العملاء بمعلومات التتبع لمعرفة حالة الشحنة وموقعها الحالي. تتيح هذه الميزة للعملاء متابعة رحلة المنتج حتى وصوله إلى وجهته.",
+        "You need the professional license simulator to be trained in a distinctive way to pass the exams. This is because its many features have made it the first in the Kingdom in this field. With it, you will obtain a license to work in Saudi schools and prove your competence and skill, because it puts you in front of an actual test through which you achieve the highest levels of training. Continue. The following lines and learn more about the best application for simulating professional license tests for teachers.":"محاكي الرخصة المهنية تحتاج إليه ليتم تدريبك بشكل مميز لاجتياز الاختبارات، ذلك لأن مميزاته الكثيرة جعلته الأول في المملكة في هذا المجال، معه سوف تحصل على رخصة للعمل في المدارس السعودية وتثبت كفاءتك ومهارتك، لأنه يضعك أمام اختبار فعلي تحقق من خلاله أعلى مستويات التدريب، تابع السطور التالية وتعرف اكثر على أفضل تطبيق لمحاكاة اختبارات الرخصة المهنية للمعلمين.",
+        "Professional license simulator":"محاكي الرخصة المهنية",
+        "What do you need to obtain a professional license through which you can work in Saudi schools, whether private or government?":"ما الذي تحتاجه للحصول على رخصة مهنية تستطيع من خلالها العمل في المدارس السعودية سواء الخاصة أو الحكومية؟",
+        "There are some conditions, most notably passing the general and specialized professional license with the grades preferred by the teacher who is applying to work there.":"هناك بعض الشروط على رأسها اجتياز السيولة الرخصة المهنية العامة والتخصصية بدرجات يفضلها المعلم الذي يقدم للعمل بها.",
+        "There are three ranks, the highest being that of the expert teacher, whose score is more than 80 out of 100, the practicing teacher, whose score ranges between 50 and 69, and the advanced teacher, whose score ranges between 70 and 79 degrees.":"حيث توجد ثلاثة رتب أعلاها رتبة المعلم الخبير الذي تزيد درجاته عن 80 درجة من مائة، ودرجة المعلم الممارس الذي تتراوح درجاته بين 50 وحتى 69 والمعلم المتقدم الذي يحصل على درجات بين 70 وحتى 79 درجة.",
+        "There are many steps you need to obtain a license to practice the teaching profession, starting with registering on the Education and Training Evaluation Commission website and ending with obtaining the license, including the stage of preparing for and taking tests.":"خطوات كثيرة تحتاجها لتحصل على رخصة مزاولة مهنة التدريس، تبدأ بالتسجيل في موقع هيئة تقويم التعليم والتدريب وتنتهي باستخراج الرخصة، ويتخللها مرحلة الاستعداد للاختبارات والخضوع لها.",
+        "This makes you need to apply a simulator through which you can ensure training appropriate to the level of the actual tests, while adhering to all the Authority’s standards.":"مما يجعلك في حاجة لتطبيق محاكي الذي تضمن من خلاله تدريبًا مناسبًا لمستوى الاختبارات الفعلية، مع التزام بكل معايير الهيئة.",
+        "The best professional licensing courses":"أفضل دورات الرخصة المهنية",
+        "The professional license simulator offers you many features and services that you need on the way to obtaining your teaching license":"يقدم لك جهاز محاكاة الترخيص الاحترافي العديد من الميزات والخدمات التي تحتاجها في طريقك للحصول على رخصة التدريس الخاصة بك",
+        "This is because it is the first program in the Kingdom specialized in training teachers and includes distinguished courses in this field, in addition to many other features, the most prominent of which are the following:":"ذلك لأنه البرنامج الأول في المملكة المتخصص في تدريب المعلمين ويتضمن دورات مميزة في هذا المجال، علاوة على الكثير من المميزات الأخرى ومن أبرزها الآتي:",
+        "The application includes a powerful and rich database of more than 18,000 questions.":"يتضمن التطبيق قاعدة بيانات قوية وثرية تضم أكثر من 18000 سؤال.",
+        "The questions available on the application are selected from previous years’ professional license tests.":"الأسئلة المتاحة على التطبيق منتقاة من اختبارات الرخصة المهنية للأعوام السابقة.",
+        "The questions include the correct answers after being reviewed and revised by experts.":"الأسئلة تتضمن الإجابات الصحيحة بعد مراجعتها وتنقيحها عن طريق الخبراء.",
+        "The professional license simulator is distinguished by providing distinguished services at competitive prices.":"يتميز محاكي الرخصة المهنية بتقديم خدمات متميزة بأسعار تنافسية.",
+        "Professional license test form for teachers":"نموذج اختبار الرخصة المهنية للمعلمين",
+        "Register now and be among the elite with Makers":"سجل الان و كن من النخبة مع صناع",
+        "Makers App blog articles help grow your project and increase your sales":"تساعد مقالات مدونة تطبيق صناع في تنمية مشروعك و زيادة مبيعاتك",
+        "Numbers we achieved":"أرقام حققناها",
+        "Maker":"صانع",
+        "Specialty":"تخصص",
+        "Type":"نوع",
+        "Download App Now":"حمل التطبيق الان",
+        "OR":"أو",
+        " Subscribe Now ":"سجل الان",
+        "Popular articles 🔥":"المقالات الرائجة 🔥",
+        "May 11, 2023":"11 مايو، 2023",
+        "40,5840 Views":"40,5840 مشاهدة"
 }

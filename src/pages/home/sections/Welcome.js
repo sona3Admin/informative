@@ -8,6 +8,7 @@ import { CheckCircleOutlined } from '@ant-design/icons'
 import { FaArrowLeft } from "react-icons/fa6";
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
+import Header1 from './../../../common/Header1';
 export default function Welcome() {
 const{t,i18n} = useTranslation()
 const navigate = useNavigate()
@@ -17,8 +18,8 @@ const navigate = useNavigate()
         <img className={style.v_line} src={v_line} />
             <div className={style.center_body} >
                 <Button onClick={()=>{navigate(`/pricing`)}} id={style.Button}>{t("See the beginning of the year offers")}<FaArrowLeft style={{transform:i18n.language === 'en' ? 'rotate(180deg)' : 'rotate(0deg)'}}/></Button>
-                <h1 className={style.h1}>{t("online platform built with Emirati hands")}</h1>
-                <h1 className={style.h1}>{t("A home for every maker and creator")}</h1>
+                <Header1 classname={style.h1} text="online platform built with Emirati hands"/>
+                <Header1 classname={style.h1} text="A home for every maker and creator"/>
                 <div className={style.p}>{t("We provide integrated services for all types of events. Our services include platform cleaning and preparation and support services")}</div>
                 <div className={style.p}>{t("We provide integrated services for all types of events. Our services include cleaning and preparing platforms")}</div>
                 <div className={style.Buttons_flex}>

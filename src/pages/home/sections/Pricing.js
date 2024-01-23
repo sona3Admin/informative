@@ -10,6 +10,8 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css';
 import { useNavigate } from 'react-router-dom';
 import { Packages } from '../../../DummyData/Data';
+import Header3 from './../../../common/Header3';
+import Header1 from './../../../common/Header1';
 export default function Pricing() {
   const {t,i18n} = useTranslation()
   const navigate = useNavigate()
@@ -32,9 +34,8 @@ export default function Pricing() {
           <h1 className={style.h1}>{t("Pricing")}</h1>
         <img className={style.s_line} src={s_line} alt="Who we are"  data-aos="fade-left" data-aos-duration="2000"/>
       </div>
-      <h1 className={style.h1}>{t("Be our success partner")}</h1>
-
-      <div className={style.p} data-aos="fade-up" data-aos-duration="1000">{t("Flexible price packages that provide you with a variety of options and features")}</div>
+      <Header1 classname={style.h1} text="Be our success partner"/>
+      <Header3 dataAos="fade-up" classname={style.p} text="Flexible price packages that provide you with a variety of options and features"/>
 
     {/* Start of Cards */}
      {matches && <div className={style.cards} >

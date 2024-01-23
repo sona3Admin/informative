@@ -52,7 +52,7 @@ useEffect(() => {
             <Button className={ Type === "annually" ? style.button_active : style.button } onClick={()=>{setType("annually");}} >{t("Annually")}</Button>
           </div>
           <div className={style.sub_notice} >
-              <div className={style.notice_text} style={{left:i18n.language === 'en' ? "-30px" : "auto", right:i18n.language === 'ar' ? "-30px" : "auto"}}>{t("Save 56% with the annual plan")}</div>
+              <div className={style.notice_text} style={{left:i18n.language === 'en' ? "-15px" : "auto", right:i18n.language === 'ar' ? "-15px" : "auto"}}>{t("Save 56% with the annual plan")}</div>
               <img src={arrow} className={style.arrow} style={{transform:i18n.language==='en' ? 'scaleX(-1)': 'scaleX(1)'}} alt="arrow"/>
           </div>
         </div>

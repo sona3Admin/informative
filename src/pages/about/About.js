@@ -26,7 +26,7 @@ export default function About() {
         <BreadCrumb/>
         <div className={style.header}  >
               <img className={style.s_line} src={s_line} alt="Who we are" />
-              <h1 className={style.header_h}>{t("Who we are ?")}</h1>
+              <h1 className={style.header_h}>{t("About Sona3")}</h1>
               <img className={style.s_line} src={s_line} alt="Who we are"  />
         </div>
         <div className={style.h3_} >{t("The largest platform for every maker and innovator in the UAE")}</div>

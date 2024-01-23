@@ -39,3 +39,11 @@
     .h1{ font-size: 1.6rem; }
     .Header { margin-bottom: 0px; margin-top: 0px; }
 }
+@media screen  and (max-width:500px){
+
+    .s_line{
+        object-fit: scale-down;
+        width: 10%;
+        transform: scale(1.5);
+    }
+}

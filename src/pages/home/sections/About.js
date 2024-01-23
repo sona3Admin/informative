@@ -10,6 +10,8 @@ import s_line from '../../../assets/s_line.png'
 import { useTranslation } from 'react-i18next'
 import { Button } from 'antd'
 import { useNavigate } from 'react-router-dom'
+import Header3 from './../../../common/Header3';
+import Header1 from './../../../common/Header1';
 
 export default function About() {
   const {t} = useTranslation()
@@ -23,10 +25,11 @@ export default function About() {
           <div className={style.Column}>
             <div className={style.header} data-aos="flip-up" >
               <img className={style.s_line} src={s_line} alt="Who we are" data-aos="fade-right" />
-              <h1>{t("Who we are ?")}</h1>
+            <Header1 text="About Sona3" style={{textAlign:"center"}}/>
               {!matches && <img className={style.s_line} src={s_line} alt="Who we are" data-aos="fade-left" />}
             </div>
-            <h3 className={style.h3} data-aos="fade-up">{t("The largest platform for every maker and innovator in the UAE")}</h3>
+            <Header3 classname={style.h3} dataAos={"fade-up"} text="The largest platform for every maker and innovator in the UAE"/>
+
             <p className={style.p} data-aos="fade-up">{t("Welcome to “Sona3”, the platform that combines art and craftsmanship to provide the most amazing products that reflect creativity and beauty. We offer many handmade products that have been crafted with care and expertise by talented craftsmen.")}</p>
 
             <div className={style.line} id={style.Line_1} data-aos="fade-up">

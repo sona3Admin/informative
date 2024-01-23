@@ -12,6 +12,9 @@ import Jobs from './pages/blog/Pages/Jobs'
 import Crafts from './pages/blog/Pages/Crafts'
 import Sona3App from './pages/blog/Pages/Sona3App'
 import Layout from './pages/blog/components/Layout'
+import PrivacyPolicy from './pages/privacy&policy/PrivacyPolicy';
+import TermsConditions from './pages/terms&conditions/TermsConditions';
+import Post from './pages/blog/Pages/Post';
 topbar.config({
   autoRun      : true,
   barThickness : 9,
@@ -42,8 +45,11 @@ export default function App_Routes() {
                 <Route  path="/blog/jobs" element={<Jobs />} />
                 <Route  path="/blog/sona3-app" element={<Sona3App />} />
           </Route>
+          <Route exact path="/blog/:section/:id" element={<Post />} />
           <Route exact path="/support" element={<Support/>} loading />
           <Route exact path="/faqs" element={<Faqs/>} loading />
+          <Route exact path="/privacy-policy" element={<PrivacyPolicy/>} loading />
+          <Route exact path="/terms-conditions" element={<TermsConditions/>} loading />
       </Routes>
     </>
   )

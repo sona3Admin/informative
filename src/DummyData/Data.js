@@ -227,6 +227,16 @@ export const Packages = [
     { header: 'Sona3 is the best e-commerce platform in the UAE', p: "Educational test forms are required for teachers who wish to obtain a professional license, in the stage of preparation for these exams and good training in order to pass them successfully without problems.",},
     { header: 'Sona3 is the best e-commerce platform in the UAE', p: "Educational test forms are required for teachers who wish to obtain a professional license, in the stage of preparation for these exams and good training in order to pass them successfully without problems.",},
     { header: 'Sona3 is the best e-commerce platform in the UAE', p: "Educational test forms are required for teachers who wish to obtain a professional license, in the stage of preparation for these exams and good training in order to pass them successfully without problems.",},
+    { header: 'Sona3 is the best e-commerce platform in the UAE', p: "Educational test forms are required for teachers who wish to obtain a professional license, in the stage of preparation for these exams and good training in order to pass them successfully without problems.",},
+    { header: 'Sona3 is the best e-commerce platform in the UAE', p: "Educational test forms are required for teachers who wish to obtain a professional license, in the stage of preparation for these exams and good training in order to pass them successfully without problems.",},
+    { header: 'Sona3 is the best e-commerce platform in the UAE', p: "Educational test forms are required for teachers who wish to obtain a professional license, in the stage of preparation for these exams and good training in order to pass them successfully without problems.",},
+    { header: 'Sona3 is the best e-commerce platform in the UAE', p: "Educational test forms are required for teachers who wish to obtain a professional license, in the stage of preparation for these exams and good training in order to pass them successfully without problems.",},
+    { header: 'Sona3 is the best e-commerce platform in the UAE', p: "Educational test forms are required for teachers who wish to obtain a professional license, in the stage of preparation for these exams and good training in order to pass them successfully without problems.",},
+    { header: 'Sona3 is the best e-commerce platform in the UAE', p: "Educational test forms are required for teachers who wish to obtain a professional license, in the stage of preparation for these exams and good training in order to pass them successfully without problems.",},
+    { header: 'Sona3 is the best e-commerce platform in the UAE', p: "Educational test forms are required for teachers who wish to obtain a professional license, in the stage of preparation for these exams and good training in order to pass them successfully without problems.",},
+    { header: 'Sona3 is the best e-commerce platform in the UAE', p: "Educational test forms are required for teachers who wish to obtain a professional license, in the stage of preparation for these exams and good training in order to pass them successfully without problems.",},
+    { header: 'Sona3 is the best e-commerce platform in the UAE', p: "Educational test forms are required for teachers who wish to obtain a professional license, in the stage of preparation for these exams and good training in order to pass them successfully without problems.",},
+    { header: 'Sona3 is the best e-commerce platform in the UAE', p: "Educational test forms are required for teachers who wish to obtain a professional license, in the stage of preparation for these exams and good training in order to pass them successfully without problems.",},
   ];
   
 
@@ -235,37 +245,37 @@ export default function Data() {
   const {t} = useTranslation()
   const sellerData = [
     {
-      header: t('Extensive marketing'),
-      p: t('We market your products effectively to reach a wider audience using advanced strategies to attract potential customers. We also care about providing attractive and creative content that highlights the beauty and uniqueness of our products.'),
+      header: 'Extensive marketing',
+      p:'We market your products effectively to reach a wider audience using advanced strategies to attract potential customers. We also care about providing attractive and creative content that highlights the beauty and uniqueness of our products.',
       img:bag
     },
     {
-      header: t('Various payment options'),
-      p: t('We are keen to provide diverse and secure payment options to our customers. We also offer innovative and reliable payment interfaces that include options such as payment via credit cards, direct debit, and bank transfers.')
+      header: 'Various payment options',
+      p: 'We are keen to provide diverse and secure payment options to our customers. We also offer innovative and reliable payment interfaces that include options such as payment via credit cards, direct debit, and bank transfers.'
       ,img:target
       
     },
     {
-      header: `${convertToArabicNumeral(24)}/${convertToArabicNumeral(7)} ${t('technical support')}`,
-      p: t('We strive to provide a comfortable and enjoyable shopping experience for our customers, where they can explore and purchase our products with ease, and in case of any questions or problems, our support team is always ready to help you and provide quick solutions.')
+      header: '24/7 technical support',
+      p: 'We strive to provide a comfortable and enjoyable shopping experience for our customers, where they can explore and purchase our products with ease, and in case of any questions or problems, our support team is always ready to help you and provide quick solutions.'
       ,img:cs
     },
   ];
   const customerData = [
     {
-      header: t('Extensive marketing'),
-      p: t('We market your products effectively to reach a wider audience using advanced strategies to attract potential customers. We also care about providing attractive and creative content that highlights the beauty and uniqueness of our products.'),
+      header: 'Extensive marketing',
+      p:'We market your products effectively to reach a wider audience using advanced strategies to attract potential customers. We also care about providing attractive and creative content that highlights the beauty and uniqueness of our products.',
       img:bag
     },
     {
-      header: t('Various payment options'),
-      p: t('We are keen to provide diverse and secure payment options to our customers. We also offer innovative and reliable payment interfaces that include options such as payment via credit cards, direct debit, and bank transfers.')
+      header: 'Various payment options',
+      p:'We are keen to provide diverse and secure payment options to our customers. We also offer innovative and reliable payment interfaces that include options such as payment via credit cards, direct debit, and bank transfers.'
       ,img:target
       
     },
     {
-      header: `${convertToArabicNumeral(24)}/${convertToArabicNumeral(7)} ${t('technical support')}`,
-      p: t('We strive to provide a comfortable and enjoyable shopping experience for our customers, where they can explore and purchase our products with ease, and in case of any questions or problems, our support team is always ready to help you and provide quick solutions.')
+      header: '24/7 technical support',
+      p: 'We strive to provide a comfortable and enjoyable shopping experience for our customers, where they can explore and purchase our products with ease, and in case of any questions or problems, our support team is always ready to help you and provide quick solutions.'
       ,img:cs
     },
   ];
@@ -282,7 +292,7 @@ export default function Data() {
     },
     {tag:t('Various payment options'),
      header:"The makers of the application make your bridge to the world of creativity and craftsmanship in the Emirates",
-     p:"We market your products effectively to reach a wider audience using advanced strategies to attract potential customers. We also care about providing attractive and creative content that highlights the beauty and uniqueness of our products.",
+     p:"We are keen to provide diverse and secure payment options to our customers. We also offer innovative and reliable payment interfaces that include options such as payment via credit cards, direct debit, and bank transfer.",
      points:["All social media platforms", "Appears on the home page of the site", "Control panel to display statistics"],
      style:"ltr",
      style_dir:"rtl",
@@ -291,9 +301,19 @@ export default function Data() {
      style_text:'end',
      color:"rgba(10, 128, 106, 1)"
     },
-    {tag: t('Various payment options'),
+    {tag: "24/7 technical support",
      header:"The makers of the application make your bridge to the world of creativity and craftsmanship in the Emirates",
-     p:"We market your products effectively to reach a wider audience using advanced strategies to attract potential customers. We also care about providing attractive and creative content that highlights the beauty and uniqueness of our products.",
+     p:"We strive to provide a comfortable and enjoyable shopping experience for our customers, where they can explore and purchase our products with ease, and in case of any questions or problems, our support team is always ready to help you and provide quick solutions.",
+     points:["All social media platforms", "Appears on the home page of the site", "Control panel to display statistics"],
+     style:"rtl",
+     style_dir:"rtl",
+     mirror:"scaleX(1)",
+     style_text:'start',
+     color:"rgba(223, 144, 25, 1)"
+    },
+    {tag:`${t('Shipment tracking')}`,
+     header:"The makers of the application make your bridge to the world of creativity and craftsmanship in the Emirates",
+     p:"The application allows customers to easily track shipments. Once the order is shipped, customers are provided with tracking information to know the status of the shipment and its current location. This feature allows customers to follow the product’s journey until it reaches their destination.",
      points:["All social media platforms", "Appears on the home page of the site", "Control panel to display statistics"],
      style:"rtl",
      style_dir:"rtl",
@@ -302,8 +322,13 @@ export default function Data() {
      color:"rgba(223, 144, 25, 1)"
     },
   ]
-
+  const articale_ads = [
+    {title:"Sona3 is the best e-commerce platform in the UAE", date:"May 11, 2023", section:"E-Commerce",image:"", views:"40,5840 Views"},
+    {title:"Sona3 is the best e-commerce platform in the UAE", date:"May 11, 2023", section:"E-Commerce",image:"", views:"40,5840 Views"},
+    {title:"Sona3 is the best e-commerce platform in the UAE", date:"May 11, 2023", section:"E-Commerce",image:"", views:"40,5840 Views"},
+    {title:"Sona3 is the best e-commerce platform in the UAE", date:"May 11, 2023", section:"E-Commerce",image:"", views:"40,5840 Views"},
+  ]
   return (
-    {customerData, sellerData, ServicesData}
+    {customerData, sellerData, ServicesData, articale_ads}
   )
 }

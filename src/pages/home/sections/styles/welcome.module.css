@@ -24,7 +24,7 @@
     font-size: 4vw;
     color: var(--red);
     font-weight: bolder;
-    font-family: ui-serif;
+   
     line-height: 0.9;
 }
 .p{
@@ -43,7 +43,7 @@
     border-radius: 50px;
     border: solid 1px var(--red);
     cursor: pointer;
-    font-family: 'Tajawal';
+    
     font-weight: bolder;
     display: inline-flex;
     gap: 10px;
@@ -200,4 +200,7 @@
     .center_body{
         width: calc(100% - 4em );
     }
+}
+@media screen and (max-width:430px) {
+    .line_data_li{ font-size: 0.65rem; font-weight: bolder; align-items:flex-start; }
 }

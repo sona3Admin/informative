@@ -1,4 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Geologica:wght@100&family=Merriweather:ital,wght@0,400;1,300&family=Raleway:ital,wght@1,100&family=Tajawal:wght@300&family=Ultra&display=swap');
+@font-face {
+  font-family: "JosefinSans";   /*Can be any text*/
+  src: local("JosefinSans"),
+    url("../src/assets/fonts/JosefinSans-VariableFont_wght.ttf") format("opentype");
+}
+@font-face {
+  font-family: "GE_SS_light";   /*Can be any text*/
+  src: local("GE_SS"),
+    url("../src/assets/fonts/GE SS Unique Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "GE_SS_bold";   /*Can be any text*/
+  src: local("GE_SS"),
+    url("../src/assets/fonts/GE_SS_Unique_Bold_5.otf") format("opentype");
+}
+
 :root {
   --red:#88050D;
   --green: #0A806A;
@@ -8,16 +23,17 @@
   --brown: #5E5242;
   --grey: #6B6B6B;
 }
+
 .html {
   scroll-behavior: smooth;
 }
 body {
   margin: 0;
   scroll-behavior: smooth;
-  font-family: 'Tajawal', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 ul.splide__pagination.splide__pagination--rtl {
   margin-top: 0px !important;

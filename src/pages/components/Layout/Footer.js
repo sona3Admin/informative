@@ -16,7 +16,7 @@ useEffect(() => {const handler = (e) => setMatches( e.matches ); window.matchMed
       <div className={style.Content_1}>
 
         <div className={style.sec_2}>
-          <div><span>{t("Register in")}</span><span style={{color:"rgba(136, 5, 13, 1)", fontWeight:"bolder"}}> {t("Newsletter")} </span><span>{t("to recieve all news of")}</span></div>
+          <div><span>{t("Register in")}</span><span style={{color:"rgba(136, 5, 13, 1)", fontWeight:"bolder", fontFamily:i18n.language === 'en' ? "JosefinSans" : "GE_SS_bold"}}> {t("Newsletter")} </span><span>{t("to recieve all news of")}</span></div>
           <div>{t("handcarfts in Emirates")}</div>
           <div className={style.Form}>
             <input className={style.input} value="" name="email" placeholder={t("Email Address")} style={{direction:i18n.language === 'en' ? 'ltr' : 'rtl'}}/>

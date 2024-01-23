@@ -1,0 +1,35 @@
+.card_image{
+    width: 100%;
+}
+
+.header{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.p{
+    text-align: justify;
+    white-space: break-spaces;
+}
+.p_{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--red);
+    gap: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.p_icon{
+    position: relative;
+    top: 3px;
+}
+
+#LoadMore_Btn{
+    width: 20%;
+    height: 45px;
+    background: var(--red);
+    color: white;
+    margin-top: 30px;
+    margin-left: 40%;
+    margin-right: 40%;
+}

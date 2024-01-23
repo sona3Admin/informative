@@ -7,6 +7,7 @@ import s_line from '../../../assets/s_line.png'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import '@splidejs/splide/css';
+import Header3 from './../../../common/Header3';
 export default function News() {
   const{t, i18n} = useTranslation()
   const splideRef = useRef(null);
@@ -74,8 +75,8 @@ export default function News() {
                     <div className={style.card}  key={i} id={i} >
                       <LazyLoadImage  className={style.image_h_line} src={sand}  effect="blur" />
                       <div className={style.card_text_content}>
-                        <h3 className={style.date} >{convertToArabicNumeral(7)} {t("Nov")} {convertToArabicNumeral(2023)}</h3>
-                        <div className={style.text} >{t(`${item.text}`)}</div>
+                        <p className={style.date} >{convertToArabicNumeral(7)} {t("Nov")} {convertToArabicNumeral(2023)}</p>
+                        <Header3 classname={style.text} text={item.text}/>
                       </div>
                     </div>
                 </SplideSlide>

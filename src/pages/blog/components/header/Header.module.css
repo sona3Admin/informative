@@ -11,7 +11,7 @@
     margin-bottom: 10px;
 }
 .header_p{
-
+    padding-bottom: 30px;
 }
 .blog_nav{
     display: flex;
@@ -27,7 +27,7 @@
 }
 #Topics{
     font-weight: bolder;
-    color: var(--green);
+    color: black;
     font-size: 1.2rem;
     margin: -2px;
 }
@@ -35,7 +35,8 @@
     width: max-content;
     cursor: pointer;
     text-decoration: none;
-    color: #a3a3a3;
+    color: rgba(77, 93, 109, 1);
+    font-weight: bold;
 }
 .blog_nav_li:hover{
     color: var(--red);
@@ -72,6 +73,11 @@
         position: relative;
         top: -45px;
         margin: 10px;
+    }
+}
+@media screen and (max-width:500px){
+    .header_p{
+        padding-bottom: 0px;
     }
 }
 
