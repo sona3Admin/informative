@@ -1,5 +1,5 @@
 import React from 'react'
-import useApi from '../components/Loading/LoadingApi'
+import useApi from '../../components/Loading/LoadingApi'
 import Welcome from './sections/Welcome'
 import About from './sections/About'
 import Services from './sections/Services'

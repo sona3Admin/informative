@@ -1,9 +1,9 @@
 import React from 'react'
-import useApi from './../../components/Loading/LoadingApi'
 import style from './style/Pages.module.css'
 import { useTranslation } from 'react-i18next'
 import { cards } from '../../../DummyData/Data'
 import Cards from './../components/cards/Cards';
+import useApi from './../../../components/Loading/LoadingApi';
 export default function Crafts() {
 useApi(600)
 const {t} = useTranslation()

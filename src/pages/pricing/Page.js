@@ -1,5 +1,5 @@
 import React, { useEffect, useState,useRef } from 'react'
-import useApi from '../components/Loading/LoadingApi'
+import useApi from '../../components/Loading/LoadingApi'
 import style from './style.module.css'
 import s_line from './../../assets/s_line.png'
 import h_line from './../../assets/h_line.png'
@@ -12,7 +12,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css';
 import { AllPackages } from '../../DummyData/Data'
 import EndBanner from './../home/sections/EndBanner';
-import BreadCrumb from './../components/Layout/BreadCrumb';
+import BreadCrumb from './../../components/Layout/BreadCrumb';
 
 export default function Pricing() {
 useApi(600)

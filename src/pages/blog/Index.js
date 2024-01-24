@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import image from './../../assets/image.png'
 import { Col, Row } from 'antd'
 import { cards } from './../../DummyData/Data'
-import useApi from './../components/Loading/LoadingApi';
+import useApi from './../../components/Loading/LoadingApi';
 import { IoArrowBackOutline, IoArrowForwardOutline } from "react-icons/io5";
 import Cards from './components/cards/Cards'
 

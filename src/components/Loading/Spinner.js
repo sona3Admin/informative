@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from 'lottie-react';
-import flag from '../../../DummyData/flag.json'; 
+import flag from './../../DummyData/flag.json'; 
 import './spinner.css';
 
 export default function Spinner({ loading }) {

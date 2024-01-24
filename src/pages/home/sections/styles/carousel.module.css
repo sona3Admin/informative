@@ -25,7 +25,7 @@
 }
 .Card{
     display: inline-flex;
-    background: aliceblue;
+    background: white;
     border-radius: 20px;
 }
 .user_info{
@@ -51,11 +51,12 @@
 }
 
 .comment{
-    background: white;
+    background: transparent;
     padding: 20px;
     width: 100%;
     text-align: justify;
     white-space: break-spaces;
+    border-radius: 15px;
 }
 
 @media screen and (max-width:700px) {

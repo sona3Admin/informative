@@ -8,7 +8,7 @@ import useApi from '../Loading/LoadingApi'
 import { useTranslation } from 'react-i18next'
 
 export default function Layout({children}) {
-  const loading  = useApi(1000);
+  const loading  = useApi(1000)
   const {i18n} = useTranslation()
   const[matches,setMatches] = useState(window.matchMedia("(min-width: 1100px)").matches)
   useEffect(() => {const handler = (e) => setMatches( e.matches ); window.matchMedia("(min-width: 1100px)").addListener(handler);},[])
@@ -16,7 +16,7 @@ export default function Layout({children}) {
     <>
     <Navbar/>
       <Spinner loading={loading} />
-      <div className={style.PageContainer} style={{fontFamily:i18n.language === 'en' ? "JosefinSans" : "GE_SS_light"}}>
+      <div className={style.PageContainer}>
         {children}
       </div>
     <Footer/>

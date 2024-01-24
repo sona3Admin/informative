@@ -69,7 +69,8 @@
   }
   
   .waviy span {
-    font-weight: 100;
+    font-family: 'JosefinSans';
+    font-weight: bolder;
     position: relative;
     display: inline-block;
     color: rgb(255, 255, 255);

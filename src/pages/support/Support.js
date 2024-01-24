@@ -3,7 +3,7 @@ import style from './style.module.css'
 import s_line from './../../assets/s_line.png'
 import h_line from './../../assets/h_line.png'
 import { useTranslation } from 'react-i18next'
-import useApi from '../components/Loading/LoadingApi'
+import useApi from '../../components/Loading/LoadingApi'
 import { Button, Form, Input } from 'antd'
 import TextArea from 'antd/es/input/TextArea'
 import { CiLocationOn } from "react-icons/ci";
@@ -17,7 +17,7 @@ import snap from '../../assets/pintrest_solid.png'
 import mail from '../../assets/mail_solid.png'
 import phone from '../../assets/phone_solid.png'
 import gps from '../../assets/gps_solid.png'
-import BreadCrumb from './../components/Layout/BreadCrumb';
+import BreadCrumb from './../../components/Layout/BreadCrumb';
 export default function Support() {
 useApi(600)
 const {t,i18n} = useTranslation()

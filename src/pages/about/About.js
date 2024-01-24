@@ -2,7 +2,7 @@ import React from 'react'
 import h_line from './../../assets/h_line.png'
 import s_line from './../../assets/s_line.png'
 import style from './style.module.css'
-import useApi from '../components/Loading/LoadingApi'
+import useApi from '../../components/Loading/LoadingApi'
 import { useTranslation } from 'react-i18next';
 import icon_1 from './../../assets/icon_1.png'
 import icon_2 from './../../assets/icon_2.png'
@@ -10,7 +10,7 @@ import Medal from './../../assets/Medal.png'
 import { convertToArabicNumeral } from './../../utils/functions'
 import Services from '../home/sections/Services'
 import EndBanner from './../home/sections/EndBanner';
-import BreadCrumb from './../components/Layout/BreadCrumb';
+import BreadCrumb from '../../components/Layout/BreadCrumb';
 
 export default function About() {
  useApi(600)

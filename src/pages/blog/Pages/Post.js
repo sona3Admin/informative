@@ -5,16 +5,22 @@ import post_img from '../../../assets/post_img.png'
 import google from '../../../assets/google_store.png'
 import app from '../../../assets/app_store.png'
 import popular from '../../../assets/popular.png'
+import facebook from '../../../assets/facebook.svg'
+import instagram from '../../../assets/instagram.svg'
+import telegram from '../../../assets/telegram.svg'
+import whatsapp from '../../../assets/whatsapp.svg'
 import { useTranslation } from 'react-i18next';
-import { Button } from 'antd';
+import { Button, Checkbox, Input } from 'antd';
 import Data from './../../../DummyData/Data';
-import BreadCrumb from './../../components/Layout/BreadCrumb';
+import TextArea from 'antd/es/input/TextArea'
+import MayLike from '../components/sliders/MayLike'
+import BreadCrumb from './../../../components/Layout/BreadCrumb';
 export default function Post() {
 const {t} = useTranslation()
 const {articale_ads} = Data()
   return (
+    <div className={style.page_container}>
     <div className={style.post_container}>
-        
         <div className={style.post_content}>
           <div className={style.BreadCrumbs}><BreadCrumb/></div>
           
@@ -121,12 +127,45 @@ const {articale_ads} = Data()
               </div>
               
               )}
-                
-
-
               </div>
             </div>
+
+
         </div>
+    </div>
+      <div className={style.bottom_content}>
+          <div className={style.hashtags}>
+            <div className={style.hashtag}>{t("#Handmade_crafts")}</div>
+            <div className={style.hashtag}>{t("#Handmade_crafts_Emirates")}</div>
+            <div className={style.hashtag}>{t("#E-commerce_Emirates")}</div>
+          </div>
+          <h3 className={style.h3}>{t("Share the article")}</h3>
+        <div className={style.social_links}>
+          <img className={style.social_img} src={facebook} alt='facebook'/>
+          <img className={style.social_img} src={instagram} alt='instagram'/>
+          <img className={style.social_img} src={telegram} alt='telegram'/>
+          <img className={style.social_img} src={whatsapp} alt='whatsapp'/>
+        </div>       
+      <form className={style.form}>
+        <h3 className={style.h3}>{t("Leave a comment")}</h3>
+        <p className={style.p}>{t("Make sure that your comment is objective and useful")}</p>
+        <div className={style.form_inputs}>
+          <div className={style.form_inputs_flex}>
+            <Input id={style.form_input} placeholder={t("Name")} name="name" type="text"/>
+            <Input id={style.form_input} placeholder={t("email")} name="email" type="emial"/>
+          </div>
+          <TextArea  autoSize= {{minRows: 5, maxRows: 6}}  placeholder={t("Type comment")}/>
+          <div className={style.form_check_line}>
+            <Checkbox />
+            <span> {t(" I accept to ")} </span>
+            <span className={style.span_custom}> {t(" Privacy & Policies ")} </span>
+          </div>
+          <Button id={style.form_btn}>{t("Send Comment")}</Button>
+        </div>
+      </form>
+      <h1 className={style.h1}>{t("Articles you may like")}</h1>
+      <MayLike/>
+      </div>
     </div>
   )
 }

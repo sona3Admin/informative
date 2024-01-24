@@ -13,6 +13,17 @@
   src: local("GE_SS"),
     url("../src/assets/fonts/GE_SS_Unique_Bold_5.otf") format("opentype");
 }
+@font-face {
+  font-family: "GE_SS_2";   /*Can be any text*/
+  src: local("GE_SS"),
+    url("../src/assets/fonts/alfont_com_GE-SS-Two-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Icons_Social";   /*Can be any text*/
+  src: local("Icons_Social"),
+    url("../src/assets/fonts/Icons Social Media 8.ttf") format("opentype");
+}
 
 :root {
   --red:#88050D;
@@ -36,11 +47,11 @@ body {
 
 
 ul.splide__pagination.splide__pagination--rtl {
-  margin-top: 0px !important;
+  top: 30px !important;
   position: relative!important;
 }
 ul.splide__pagination.splide__pagination--ltr{
-  margin-top: 0px !important;
+  top: 30px !important;
   position: relative!important;
 }
 
@@ -116,4 +127,33 @@ ol {
   border-bottom: none!important;
   border-radius: 0px!important;
   border-top: none!important;
+}
+
+.ant-collapse.ant-collapse-icon-position-start.css-dev-only-do-not-override-dkbvqv {
+  font-family: 'GE_SS_light'!important;
+}
+.ant-collapse.ant-collapse-icon-position-start.css-dkbvqv{
+  font-family: 'GE_SS_light'!important;
+}
+
+
+button.ant-btn.css-dev-only-do-not-override-dkbvqv.ant-btn-default{
+    font-family: 'GE_SS_2'!important;
+}
+button.ant-btn.css-dkbvqv.ant-btn-default{
+  font-family: 'GE_SS_2'!important;
+}
+
+h1{
+  font-family: 'GE_SS_bold';
+}
+
+
+
+@media screen and (max-width:750px) {
+  ul.splide__pagination.splide__pagination--rtl {
+    top: -30px !important;
+    position: relative!important;
+}
+  
 }

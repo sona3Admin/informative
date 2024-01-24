@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import style from './style.module.css'
 import s_line from './../../assets/s_line.png'
 import h_line from './../../assets/h_line.png'
-import useApi from '../components/Loading/LoadingApi'
+import useApi from '../../components/Loading/LoadingApi'
 import { useTranslation } from 'react-i18next'
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
 import { Collapse } from 'antd'
 import { common_q, support_q, pay_q, return_q, products_q } from '../../DummyData/Data'
-import BreadCrumb from './../components/Layout/BreadCrumb';
 import EndBanner from './../home/sections/EndBanner';
+import BreadCrumb from './../../components/Layout/BreadCrumb';
 const { Panel } = Collapse;
 
 export default function Faqs() {

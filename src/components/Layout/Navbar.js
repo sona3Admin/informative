@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import style from './styles/nav.module.css'
-import logo from '../../../assets/logo.png'
+import logo from '../../assets/logo.png'
 import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import LangDropDown from '../Lang/LangDropDown'
 import { Button } from 'antd'

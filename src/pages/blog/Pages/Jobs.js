@@ -1,5 +1,5 @@
 import React from 'react'
-import useApi from './../../components/Loading/LoadingApi'
+import useApi from './../../../components/Loading/LoadingApi'
 import style from './style/Pages.module.css'
 import { useTranslation } from 'react-i18next'
 import { cards } from '../../../DummyData/Data'

@@ -1,9 +1,9 @@
 import s_line from './../../assets/s_line.png'
 import h_line from './../../assets/h_line.png'
 import style from './style.module.css'
-import BreadCrumb from './../components/Layout/BreadCrumb';
-import useApi from './../components/Loading/LoadingApi';
+import useApi from './../../components/Loading/LoadingApi';
 import { useTranslation } from 'react-i18next';
+import BreadCrumb from './../../components/Layout/BreadCrumb';
 
 export default function TermsConditions() {
 useApi(600)

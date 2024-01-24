@@ -1,0 +1,11 @@
+.card_image{
+    width: 100%;
+}
+.title{
+    width: 103%;
+    color: var(--red);
+    text-decoration: underline;
+    margin-top: 12px;
+    display: flex;
+    word-break: break-all;
+}

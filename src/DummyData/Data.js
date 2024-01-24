@@ -328,7 +328,15 @@ export default function Data() {
     {title:"Sona3 is the best e-commerce platform in the UAE", date:"May 11, 2023", section:"E-Commerce",image:"", views:"40,5840 Views"},
     {title:"Sona3 is the best e-commerce platform in the UAE", date:"May 11, 2023", section:"E-Commerce",image:"", views:"40,5840 Views"},
   ]
+  const May_Like_Articles = [
+    {title:"Sona3 is the best e-commerce platform in the UAE", image:""},
+    {title:"Sona3 is the best e-commerce platform in the UAE", image:""},
+    {title:"Sona3 is the best e-commerce platform in the UAE", image:""},
+    {title:"Sona3 is the best e-commerce platform in the UAE", image:""},
+    {title:"Sona3 is the best e-commerce platform in the UAE", image:""},
+    {title:"Sona3 is the best e-commerce platform in the UAE", image:""},
+  ]
   return (
-    {customerData, sellerData, ServicesData, articale_ads}
+    {customerData, sellerData, ServicesData, articale_ads, May_Like_Articles}
   )
 }
