@@ -167,13 +167,29 @@
     .line_data_li{ font-size: 0.85rem; }
     .main_image {
         width: 100%;
-        margin-top: 20px;
+        margin-top: 80px;
+    }
+    #Button {
+        margin-bottom: 25px;
+    }
+    .Buttons_flex {
+        margin-top: 25px;
+        margin-bottom: -40px;
+    }
+    .line_data {
+        margin-top: 50px;
+        margin-bottom: -50px;
     }
 }
 
-@media screen and (max-width:540px) {
+@media screen and (max-width:560px) {
+    #Button {
+        margin-bottom: 25px;
+    }
     .Buttons_flex {
-        margin-top: 50px;
+        margin-top: 25px;
+        margin-bottom: -40px;
+        transform: scale(.9);
     }
     .line_data{
         display: flex;
@@ -202,5 +218,6 @@
     }
 }
 @media screen and (max-width:430px) {
+
     .line_data_li{ font-size: 0.65rem; font-weight: bolder; align-items:flex-start; }
 }

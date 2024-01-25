@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import h_line from './../../assets/h_line.png'
 import s_line from './../../assets/s_line.png'
 import style from './style.module.css'
@@ -7,10 +7,20 @@ import { useTranslation } from 'react-i18next';
 import icon_1 from './../../assets/icon_1.png'
 import icon_2 from './../../assets/icon_2.png'
 import Medal from './../../assets/Medal.png'
-import { convertToArabicNumeral } from './../../utils/functions'
+import img_1 from './../../assets/about/1.png'
+import img_2 from './../../assets/about/2.png'
+import img_3 from './../../assets/about/3.png'
+import img_4 from './../../assets/about/4.png'
+import img_5 from './../../assets/about/5.png'
+import img_6 from './../../assets/about/6.png'
+import img_7 from './../../assets/about/7.png'
+import { CheckOutlined } from '@ant-design/icons'
 import Services from '../home/sections/Services'
 import EndBanner from './../home/sections/EndBanner';
 import BreadCrumb from '../../components/Layout/BreadCrumb';
+import Header3 from '../../common/Header3'
+import { Col, Row } from 'antd';
+import Header1 from '../../common/Header1'
 
 export default function About() {
  useApi(600)
@@ -20,53 +30,106 @@ export default function About() {
   {name:"Sold Product", number:"2000",background:"rgba(223, 144, 25, 1)"},
   {name:"Daily vistors", number:"30000",background:"rgba(10, 128, 106, 1)"},
 ]
+ const Goals = [
+  {title:"Facilitating procedures", image:img_1},
+  {title:"Digital leadership", image:img_2},
+  {title:"Support and empowerment", image:img_3},
+  {title:"Community development", image:img_4},
+  {title:"Improvement", image:img_5},
+  {title:"Quality and innovation", image:img_6},
+  {title:"Privacy and respect", image:img_7},
+]
+ const AboutPoints = [
+  {title:"We target creators and makers who want to sell their handmade products and services online."},
+  {title:"We encourage local markets in the UAE that are interested in unique and handcrafted products."},
+  {title:"We seek to create an image that reflects our distinction as a platform that supports creativity and contributes to the success of creators."},
+  {title:"We distinguish ourselves from our competitors by providing an interactive environment for creators and makers."},
+]
+const[matches,setMatches] = useState(window.matchMedia("(min-width: 1050px)").matches)
+useEffect(() => {const handler = (e) => setMatches( e.matches ); window.matchMedia("(min-width: 1050px)").addListener(handler);},[])
   return (
     <div>
         <img className={style.image_h_line} src={h_line} alt='h_line'/>
         <BreadCrumb/>
         <div className={style.header}  >
               <img className={style.s_line} src={s_line} alt="Who we are" />
-              <h1 className={style.header_h}>{t("About Sona3")}</h1>
+                <Header1 classname={style.header_h} text={"About Sona3"}/>
               <img className={style.s_line} src={s_line} alt="Who we are"  />
         </div>
-        <div className={style.h3_} >{t("The largest platform for every maker and innovator in the UAE")}</div>
-        <p className={style.p} >{t("Welcome to “Sona3”, the platform that combines art and craftsmanship to provide the most amazing products that reflect creativity and beauty. We offer many handmade products that have been crafted with care and expertise by talented craftsmen.")}</p>
-        <div className={style.header}  >
-              <img className={style.s_line} src={s_line} alt="Who we are" />
-              <h1 className={style.header_h}>{t("Our Vision")}</h1>
-              <img className={style.s_line} src={s_line} alt="Who we are"  />
-        </div>
-        <p className={style.p2} id={style.p_bold}>{t("An incubator platform for all Emirati makers that is unique in its quality, characterized by its originality, and contributes to enriching community development.")}</p>
+        <Header3 classname={style.h3_} text={"Online platform built with Emirati hands A home for every maker and creator"}/>
           <div className={style.cards}>
-            <div className={style.line} id={style.Line_1} data-aos="fade-up">
-              <img className={style.icon} src={icon_1} alt="header"/>
-              <div className={style.line_text}><span className={style.line_text_bold}>{t("You'll find a diverse range of products, ")}</span><span>{t("from traditional handicrafts to contemporary designs inspired by contemporary art.")}</span></div>
-            </div>
-            <div className={style.line} id={style.Line_2} data-aos="fade-up">
-              <img className={style.icon} src={Medal} alt="header"/>
-              <div className={style.line_text}><span className={style.line_text_bold}>{t("We care about details and quality, ")}</span><span>{t("so we only work with experienced craftsmen who have exceptional skills in creating unique products, ")}</span></div>
-            </div>
-            <div className={style.line} id={style.Line_3} data-aos="fade-up">
-              <img className={style.icon} src={icon_2} alt="header"/>
-              <div className={style.line_text}><span className={style.line_text_bold}>{t("Whether you are looking for a piece of art to enhance your home, ")}</span><span>{t("Or a special and special gift for someone dear to you, ”Sona3” is the ideal platform to meet your needs, ")}</span></div>
-            </div>
+            <Row gutter={[8, 8]} type="flex" align="middle">
+              <Col span={matches ? 12 : 24} type="flex" align="middle">
+                <div className={style.line} id={style.Line_1}>
+                  <img className={style.icon} src={icon_1} alt="header"/>
+                  <div className={style.line_text}><span className={style.line_text_bold}>{t("Sona3 is an online platform built by Emirati hands, ")}</span><span className={style.p}>{t("designed to be a home for every maker and innovator in various fields, and to enable creators and makers to form a fan base that increases their commercial and financial growth opportunities.")}</span></div>
+                </div>
+              </Col>
+              <Col span={matches ? 12 : 24} type="flex" align="middle">
+                <div className={style.line} id={style.Line_2} >
+                  <img className={style.icon} src={Medal} alt="header"/>
+                  <div className={style.line_text}><span className={style.line_text_bold}>{t("At Sona3, we believe that creativity and innovation begin with creating new opportunities, ")}</span><span className={style.p}>{t("and this is what we offer on our platform to every creative person to help him start his journey and to support him to attract clients.")}</span></div>
+                </div>
+              </Col>
+              <Col span={matches ? 12 : 24} type="flex" align="middle">
+                <div className={style.line} id={style.Line_3} >
+                  <img className={style.icon} src={icon_2} alt="header"/>
+                  <div className={style.line_text}><span className={style.line_text_bold}>{t("Our platform is distinguished by the use of modern technologies, ")}</span><span className={style.p}>{t("and unique designs that allow manufacturers to upload their products or services easily and display them in an attractive and distinctive way.")}</span></div>
+                </div>
+              </Col>
+              <Col span={matches ? 12 : 24} type="flex" align="middle">
+                <div className={style.line} id={style.Line_1} >
+                  <img className={style.icon} src={icon_1} alt="header"/>
+                  <div className={style.line_text}><span className={style.line_text_bold}>{t("Our efforts are focused on supporting and empowering owners of home projects, ")}</span><span className={style.p}>{t("handicrafts and highlighting the creative hands of people of determination, as well as owners of productive farms, with the aim of improving the quality of community services.")}</span></div>
+                </div>
+              </Col>
+            </Row>
           </div>
-          <div className={style.message} data-aos="fade-up">
-            <div className={style.message_h}>{t("Our Message")}</div>
-              <div className={style.message_p}>{t("Empowering and assisting crafts owners, small businesses, and talented people of determination, and becoming the link between the manufacturer and the buyer.")}</div>
+          <div className={style.message_content}>
+              <div className={style.message}  >
+                <Header3 classname={style.message_h} text={"Our Vision"}/>
+                <div className={style.message_p}>{t("Empowering and assisting crafts owners, small businesses, and talented people of determination, and becoming the link between the manufacturer and the buyer.")}</div>
+              </div>
+
+              <div className={style.message}  >
+                <Header3 classname={style.message_h} text={"Our Message"}/>
+                <div className={style.message_p}>{t("Empowering and assisting crafts owners, small businesses, and talented people of determination, and becoming the link between the manufacturer and the buyer.")}</div>
+              </div>
           </div>
-          <div className={style.statistics} data-aos="fade-up">
-            <div className={style.statistics_h} >{t("We are slowly growing our community towards excellence in the UAE")}</div>
-            <div className={style.statistics_cards}>
-              {data.map((items,key)=>
-                 <div className={style.statistics_card} style={{background:`${items.background}`}} data-aos="fade-up" data-aos-delay={key*500} data-aos-duration="2000">
-                    <div className={style.card_number}>{ convertToArabicNumeral(items.number)}</div>
-                    <div className={style.card_name} >{t(`${items.name}`)}</div>
-                 </div>
+          <div className={style.Goals_Container}>
+            <div className={style.goals_header_container}  >
+                <img className={style.s_line} src={s_line} alt="Our Goals" />
+                  <div className={style.goals_header}>{t("Our Goals")}</div>
+                <img className={style.s_line} src={s_line} alt="Our Goals"  />
+            </div>
+            <Row gutter={[8, 8]} type="flex" align="middle" style={{justifyContent:"center"}}>
+              {Goals.map((items,key)=>
+                <Col span={matches ? 6 : 8} type="flex" align="middle"  style={{justifyContent:"center"}}>
+                <div className={style.goal_card} >
+                  <img className={style.goal_image} src={items.image} alt="goal_image_1"/>
+                  <div className={style.goal_text}>{t(`${items.title}`)}</div>
+                </div>
+              </Col>
               )}
-            </div>
+            </Row>
           </div>
-          <Services/>
+          <div className={style.header}  >
+              <img className={style.s_line} src={s_line} alt="Who we are" />
+              <Header3 classname={style.points_header_h} text={"Empowering makers and creators is our priority"}/>
+              <img className={style.s_line} src={s_line} alt="Who we are"  />
+          </div>
+          <div className={style.Points_Container}>
+            <Row gutter={[8, 8]} type="flex" align="middle" style={{justifyContent:"center"}}>
+              {AboutPoints.map((items,key)=>
+                <Col span={matches ? 12 : 24} type="flex" align="middle"  style={{justifyContent:"center"}}>
+                <div className={style.point_card} >
+                  <CheckOutlined className={style.point_check_icon}/>
+                  <div className={style.point_text}>{t(`${items.title}`)}</div>
+                </div>
+              </Col>
+              )}
+            </Row>
+          </div>
           <EndBanner color={"#88050D"}/>
     </div>
   )

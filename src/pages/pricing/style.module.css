@@ -122,7 +122,7 @@
 .cards{
     display: flex;
     margin: 20px;
-    margin-top: 30px;
+    margin-top: -100px;
     gap: 15px;
     width: calc(100% - 40px);
     transform: scale(.87)!important;
@@ -138,7 +138,7 @@
     transition: all 0.3s ease-in-out;
 }
 .card:hover{
-    transform: scale(1);
+    transform: scale(0.95);
 }
 .pricing_content{
     border-bottom: solid 2px grey;
@@ -250,7 +250,7 @@
     transition: all 0.3s ease-in-out;
 }
 #Best:hover{
-    transform: scale(1);
+    transform: scale(0.95);
 }
 .best_selling{
     position: relative;

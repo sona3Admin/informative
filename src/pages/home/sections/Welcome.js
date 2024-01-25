@@ -20,8 +20,8 @@ const navigate = useNavigate()
                 <Button onClick={()=>{navigate(`/pricing`)}} id={style.Button}>{t("See the beginning of the year offers")}<FaArrowLeft style={{transform:i18n.language === 'en' ? 'rotate(180deg)' : 'rotate(0deg)'}}/></Button>
                 <Header1 classname={style.h1} text="online platform built with Emirati hands"/>
                 <Header1 classname={style.h1} text="A home for every maker and creator"/>
-                <div className={style.p}>{t("We provide integrated services for all types of events. Our services include platform cleaning and preparation and support services")}</div>
-                <div className={style.p}>{t("We provide integrated services for all types of events. Our services include cleaning and preparing platforms")}</div>
+                {/* <div className={style.p}>{t("We provide integrated services for all types of events. Our services include platform cleaning and preparation and support services")}</div> */}
+                {/* <div className={style.p}>{t("We provide integrated services for all types of events. Our services include cleaning and preparing platforms")}</div> */}
                 <div className={style.Buttons_flex}>
                     <Button onClick={()=>{window.open(`https://play.google.com/store/games?device=windows&pli=1`, '_blank')}} id={style.Seller_Btn}>{t("Register now as seller and join us")}</Button>
                     <Button onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} id={style.Customer_Btn}>{t("Go Shopping")}</Button>

@@ -7,6 +7,7 @@ import snap from '../../assets/snap.png'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import { Button } from 'antd'
+import Header1 from './../../common/Header1';
 export default function Footer() {
 const {t,i18n} = useTranslation()
 const[matches,setMatches] = useState(window.matchMedia("(min-width: 1100px)").matches)
@@ -25,7 +26,7 @@ useEffect(() => {const handler = (e) => setMatches( e.matches ); window.matchMed
         </div>
 
         <div className={style.sec_1}>
-              <h1 className={style.h1}>{t("Join Sona3 Society")}</h1>
+              <Header1 classname={style.h1} text={"Join Sona3 Society"}/>
               <div className={style.Social_Icons}>
                 <NavLink ><img onClick={()=>{window.open(`https://www.facebook.com/sona3app`, '_blank')}} src={facebook} className={style.img_link} alt="1"/></NavLink>
                 <NavLink ><img onClick={()=>{window.open(`https://twitter.com/Sona3app`, '_blank')}} src={twitter} className={style.img_link} alt="2"/></NavLink>

@@ -25,6 +25,11 @@
     font-weight: bolder;
 }
 
+.h2{
+    margin: 0;
+    font-size: 1.3rem;
+    font-family: 'GE_SS_light';
+}
 
 
 #Button{
@@ -143,11 +148,18 @@
 .features_container{
     text-align: start;
 }
+.features_container_home{
+    max-height: 370px;
+    overflow: hidden;
+}
+
 .feature_li{
     display: flex;
     gap: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
+    font-weight: normal;
+    font-size: 0.9rem;
 }
 
 

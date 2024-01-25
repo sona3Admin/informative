@@ -2,82 +2,185 @@ import React from 'react'
 import { useTranslation } from 'react-i18next';
 import bag from './../assets/bag.png'
 import cs from './../assets/cs.png'
+import car from './../assets/car.png'
+import pay from './../assets/pay.png'
+import hour from './../assets/24.png'
 import target from './../assets/target.png'
 import { convertToArabicNumeral } from './../utils/functions';
 export const Packages = [
     {
-      name:"Special package",
+      name:"Free",
        p:"Level up with more power and enhanced features",
-       originalPrice:100,
-        price:650,
-        discount:30,
+       originalPrice:0,
+        price:0,
+        discount:100,
         features:[
-          {status:true,name:"Daily appearance on the homepage"},
-          {status:true,name:"Free marketing on social media"},
-          {status:true,name:"Professional product photography"},
-          {status:false,name:"Priority in customer support"},
-          {status:false,name:"Increased visibility in search engines"},
-          {status:false,name:"Increased visibility in search engines"},
-
+          {status:false,name:"Number of products displayed"},
+          {status:false,name:"Number of orders"},
+          {status:false,name:"No commission on sales"},
+          {status:false,name:"Banners on the application's home page"},
+          {status:true,name:"Show product discounts"},
         ],
         marketing:[
-          {status:true,name:"Daily appearance on the homepage"},
-          {status:true,name:"Free marketing on social media"},
-          {status:true,name:"Professional product photography"},
-          {status:false,name:"Priority in customer support"},
-          {status:false,name:"Increased visibility in search engines"},
-          {status:false,name:"Increased visibility in search engines"},
+          {status:false,name:"Special offers"},
+          {status:false,name:"Benefit from appearing on search engines"},
+          {status:false,name:"Social media publications"},
+          {status:false,name:"Discount coupons"},
+          {status:false,name:"Show the store on the home page of the application"},
+          {status:false,name:"Display the store on the home page of the site"},
+          {status:true,name:"Loyalty points"},
+        ],
+        shipping:[
+          {status:false,name:"Shipping companies available"},
+          {status:false,name:"Packaging bags"},
+        ],
+        management:[
+          {status:true,name:"Mobile store management iOS and Android"},
+          {status:false,name:"Reports"},
+          {status:false,name:"Users number"},
+          {status:false,name:"And other advantages"},
+        ],
+        advanced:[
+          {status:true,name:"Number of languages"},
+          {status:false,name:"Number of currencies"},
+          {status:false,name:"Recover deleted data"},
+          {status:false,name:"Training courses"},
+          {status:true,name:"Technical Support"},
+          {status:false,name:"E-marketing service providers"},
+          {status:false,name:"Product photography service providers"},
+          {status:false,name:"Product packaging service providers"},
         ],
        },
     {
-      name:"Best Selling",
+      name:"Basic",
        p:"Level up with more power and enhanced features",
-       originalPrice:1200,
-        price:900,
-        discount:40,
-        features:[
-          {status:true,name:"Daily appearance on the homepage"},
-          {status:true,name:"Free marketing on social media"},
-          {status:true,name:"Professional product photography"},
-          {status:true,name:"Priority in customer support"},
-          {status:false,name:"Increased visibility in search engines"},
-          {status:false,name:"Increased visibility in search engines"},
-
-        ],
-        marketing:[
-          {status:true,name:"Daily appearance on the homepage"},
-          {status:true,name:"Free marketing on social media"},
-          {status:true,name:"Professional product photography"},
-          {status:true,name:"Priority in customer support"},
-          {status:false,name:"Increased visibility in search engines"},
-          {status:false,name:"Increased visibility in search engines"},
-        ],
-        Special:true
-       },
-    {
-      name:"Premium package",
-       p:"Level up with more power and enhanced features",
-       originalPrice:1800,
+       originalPrice:1000,
         price:1500,
         discount:30,
         features:[
-          {status:true,name:"Daily appearance on the homepage"},
-          {status:true,name:"Free marketing on social media"},
-          {status:true,name:"Professional product photography"},
-          {status:true,name:"Priority in customer support"},
-          {status:true,name:"Increased visibility in search engines"},
-          {status:true,name:"Increased visibility in search engines"},
-
+          {status:false,name:"Number of products displayed"},
+          {status:false,name:"Number of orders"},
+          {status:false,name:"No commission on sales"},
+          {status:false,name:"Banners on the application's home page"},
+          {status:true,name:"Show product discounts"},
         ],
         marketing:[
-          {status:true,name:"Daily appearance on the homepage"},
-          {status:true,name:"Free marketing on social media"},
-          {status:true,name:"Professional product photography"},
-          {status:true,name:"Priority in customer support"},
-          {status:true,name:"Increased visibility in search engines"},
-          {status:true,name:"Increased visibility in search engines"},
+          {status:true,name:"Special offers"},
+          {status:true,name:"Benefit from appearing on search engines"},
+          {status:true,name:"Social media publications"},
+          {status:false,name:"Discount coupons"},
+          {status:true,name:"Show the store on the home page of the application"},
+          {status:true,name:"Display the store on the home page of the site"},
+          {status:true,name:"Loyalty points"},
         ],
-       }
+        shipping:[
+          {status:true,name:"Shipping companies available"},
+          {status:true,name:"Packaging bags"},
+        ],
+        management:[
+          {status:true,name:"Mobile store management iOS and Android"},
+          {status:true,name:"Reports"},
+          {status:true,name:"Users number"},
+          {status:false,name:"And other advantages"},
+        ],
+        advanced:[
+          {status:true,name:"Number of languages"},
+          {status:false,name:"Number of currencies"},
+          {status:false,name:"Recover deleted data"},
+          {status:false,name:"Training courses"},
+          {status:true,name:"Technical Support"},
+          {status:false,name:"E-marketing service providers"},
+          {status:false,name:"Product photography service providers"},
+          {status:false,name:"Product packaging service providers"},
+        ],
+       },
+    {
+      name:"Professional",
+       p:"Level up with more power and enhanced features",
+       originalPrice:2000,
+        price:2500,
+        discount:30,
+        features:[
+          {status:true,name:"Number of products displayed"},
+          {status:false,name:"Number of orders"},
+          {status:true,name:"No commission on sales"},
+          {status:true,name:"Banners on the application's home page"},
+          {status:true,name:"Show product discounts"},
+        ],
+        marketing:[
+          {status:true,name:"Special offers"},
+          {status:true,name:"Benefit from appearing on search engines"},
+          {status:true,name:"Social media publications"},
+          {status:true,name:"Discount coupons"},
+          {status:true,name:"Show the store on the home page of the application"},
+          {status:true,name:"Display the store on the home page of the site"},
+          {status:true,name:"Loyalty points"},
+        ],
+        shipping:[
+          {status:true,name:"Shipping companies available"},
+          {status:true,name:"Packaging bags"},
+        ],
+        management:[
+          {status:true,name:"Mobile store management iOS and Android"},
+          {status:true,name:"Reports"},
+          {status:true,name:"Users number"},
+          {status:false,name:"And other advantages"},
+        ],
+        advanced:[
+          {status:true,name:"Number of languages"},
+          {status:false,name:"Number of currencies"},
+          {status:false,name:"Recover deleted data"},
+          {status:true,name:"Training courses"},
+          {status:true,name:"Technical Support"},
+          {status:false,name:"E-marketing service providers"},
+          {status:false,name:"Product photography service providers"},
+          {status:false,name:"Product packaging service providers"},
+        ],
+       },
+    {
+      name:"Advanced",
+       p:"Level up with more power and enhanced features",
+       originalPrice:3000,
+        price:3500,
+        discount:30,
+        features:[
+          {status:true,name:"Number of products displayed"},
+          {status:false,name:"Number of orders"},
+          {status:true,name:"No commission on sales"},
+          {status:true,name:"Banners on the application's home page"},
+          {status:true,name:"Show product discounts"},
+        ],
+        marketing:[
+          {status:true,name:"Special offers"},
+          {status:true,name:"Benefit from appearing on search engines"},
+          {status:true,name:"Social media publications"},
+          {status:true,name:"Discount coupons"},
+          {status:true,name:"Show the store on the home page of the application"},
+          {status:true,name:"Display the store on the home page of the site"},
+          {status:true,name:"Loyalty points"},
+        ],
+        shipping:[
+          {status:true,name:"Shipping companies available"},
+          {status:true,name:"Packaging bags"},
+        ],
+        management:[
+          {status:true,name:"Mobile store management iOS and Android"},
+          {status:true,name:"Reports"},
+          {status:true,name:"Users number"},
+          {status:false,name:"And other advantages"},
+        ],
+        advanced:[
+          {status:true,name:"Number of languages"},
+          {status:false,name:"Number of currencies"},
+          {status:false,name:"Recover deleted data"},
+          {status:true,name:"Training courses"},
+          {status:true,name:"Technical Support"},
+          {status:false,name:"E-marketing service providers"},
+          {status:false,name:"Product photography service providers"},
+          {status:false,name:"Product packaging service providers"},
+        ],
+       },
+    
   ];
 
 
@@ -91,7 +194,7 @@ export const Packages = [
         price:0,
         discount:100,
         features:[
-          {status:true,name:"Daily appearance on the homepage"},
+          {status:false,name:"Daily appearance on the homepage"},
           {status:false,name:"Free marketing on social media"},
           {status:false,name:"Professional product photography"},
           {status:false,name:"Priority in customer support"},
@@ -100,7 +203,7 @@ export const Packages = [
 
         ],
         marketing:[
-          {status:true,name:"Daily appearance on the homepage"},
+          {status:false,name:"Daily appearance on the homepage"},
           {status:false,name:"Free marketing on social media"},
           {status:false,name:"Professional product photography"},
           {status:false,name:"Priority in customer support"},
@@ -115,18 +218,18 @@ export const Packages = [
         price:650,
         discount:40,
         features:[
-          {status:true,name:"Daily appearance on the homepage"},
-          {status:true,name:"Free marketing on social media"},
-          {status:true,name:"Professional product photography"},
+          {status:false,name:"Daily appearance on the homepage"},
+          {status:false,name:"Free marketing on social media"},
+          {status:false,name:"Professional product photography"},
           {status:false,name:"Priority in customer support"},
           {status:false,name:"Increased visibility in search engines"},
           {status:false,name:"Increased visibility in search engines"},
 
         ],
         marketing:[
-          {status:true,name:"Daily appearance on the homepage"},
-          {status:true,name:"Free marketing on social media"},
-          {status:true,name:"Professional product photography"},
+          {status:false,name:"Daily appearance on the homepage"},
+          {status:false,name:"Free marketing on social media"},
+          {status:false,name:"Professional product photography"},
           {status:false,name:"Priority in customer support"},
           {status:false,name:"Increased visibility in search engines"},
           {status:false,name:"Increased visibility in search engines"},
@@ -139,23 +242,23 @@ export const Packages = [
         price:900,
         discount:60,
         features:[
-          {status:true,name:"Daily appearance on the homepage"},
-          {status:true,name:"Free marketing on social media"},
-          {status:true,name:"Professional product photography"},
-          {status:true,name:"Priority in customer support"},
+          {status:false,name:"Daily appearance on the homepage"},
+          {status:false,name:"Free marketing on social media"},
+          {status:false,name:"Professional product photography"},
+          {status:false,name:"Priority in customer support"},
           {status:false,name:"Increased visibility in search engines"},
           {status:false,name:"Increased visibility in search engines"},
 
         ],
         marketing:[
-          {status:true,name:"Daily appearance on the homepage"},
-          {status:true,name:"Free marketing on social media"},
-          {status:true,name:"Professional product photography"},
-          {status:true,name:"Priority in customer support"},
+          {status:false,name:"Daily appearance on the homepage"},
+          {status:false,name:"Free marketing on social media"},
+          {status:false,name:"Professional product photography"},
+          {status:false,name:"Priority in customer support"},
           {status:false,name:"Increased visibility in search engines"},
           {status:false,name:"Increased visibility in search engines"},
         ],
-        Special:true
+        Special:false
        },
     {
       name:"Premium package",
@@ -164,21 +267,21 @@ export const Packages = [
         price:1500,
         discount:30,
         features:[
-          {status:true,name:"Daily appearance on the homepage"},
-          {status:true,name:"Free marketing on social media"},
-          {status:true,name:"Professional product photography"},
-          {status:true,name:"Priority in customer support"},
-          {status:true,name:"Increased visibility in search engines"},
-          {status:true,name:"Increased visibility in search engines"},
+          {status:false,name:"Daily appearance on the homepage"},
+          {status:false,name:"Free marketing on social media"},
+          {status:false,name:"Professional product photography"},
+          {status:false,name:"Priority in customer support"},
+          {status:false,name:"Increased visibility in search engines"},
+          {status:false,name:"Increased visibility in search engines"},
 
         ],
         marketing:[
-          {status:true,name:"Daily appearance on the homepage"},
-          {status:true,name:"Free marketing on social media"},
-          {status:true,name:"Professional product photography"},
-          {status:true,name:"Priority in customer support"},
-          {status:true,name:"Increased visibility in search engines"},
-          {status:true,name:"Increased visibility in search engines"},
+          {status:false,name:"Daily appearance on the homepage"},
+          {status:false,name:"Free marketing on social media"},
+          {status:false,name:"Professional product photography"},
+          {status:false,name:"Priority in customer support"},
+          {status:false,name:"Increased visibility in search engines"},
+          {status:false,name:"Increased visibility in search engines"},
         ],
        }
   ];
@@ -247,81 +350,70 @@ export default function Data() {
     {
       header: 'Extensive marketing',
       p:'We market your products effectively to reach a wider audience using advanced strategies to attract potential customers. We also care about providing attractive and creative content that highlights the beauty and uniqueness of our products.',
-      img:bag
+      img:bag,
+      style:"rtl",
+      style_dir:"rtl",
+      mirror:"scaleX(1)",
+      style_text:'start',
+      color:"rgba(136, 5, 13, 1)"
     },
     {
       header: 'Various payment options',
       p: 'We are keen to provide diverse and secure payment options to our customers. We also offer innovative and reliable payment interfaces that include options such as payment via credit cards, direct debit, and bank transfers.'
-      ,img:target
+      ,img:target,
+      style:"ltr",
+      style_dir:"rtl",
+      style_align:"right",
+      mirror:"scaleX(-1)",
+      style_text:'end',
+      color:"rgba(10, 128, 106, 1)"
       
     },
     {
       header: '24/7 technical support',
       p: 'We strive to provide a comfortable and enjoyable shopping experience for our customers, where they can explore and purchase our products with ease, and in case of any questions or problems, our support team is always ready to help you and provide quick solutions.'
-      ,img:cs
+      ,img:cs,
+      style:"rtl",
+      style_dir:"rtl",
+      mirror:"scaleX(1)",
+      style_text:'start',
+      color:"rgba(223, 144, 25, 1)"
     },
   ];
   const customerData = [
     {
-      header: 'Extensive marketing',
-      p:'We market your products effectively to reach a wider audience using advanced strategies to attract potential customers. We also care about providing attractive and creative content that highlights the beauty and uniqueness of our products.',
-      img:bag
+      header: 'Fast and safe shipping',
+      p:"Don't worry about shipping, exchange and return options, we take care of all shipping services for you, to provide you with a comfortable shopping experience.",
+      img:car,
+      style:"rtl",
+      style_dir:"rtl",
+      mirror:"scaleX(1)",
+      style_text:'start',
+      color:"rgba(136, 5, 13, 1)"
     },
     {
-      header: 'Various payment options',
-      p:'We are keen to provide diverse and secure payment options to our customers. We also offer innovative and reliable payment interfaces that include options such as payment via credit cards, direct debit, and bank transfers.'
-      ,img:target
+      header: 'Multiple payment systems',
+      p:"Sonaa offers various payment systems that suit all categories to facilitate the customer’s shopping experience, all of which are secure due to our commitment to the highest levels of security and digital protection."
+      ,img:pay,
+      style:"ltr",
+      style_dir:"rtl",
+      style_align:"right",
+      mirror:"scaleX(-1)",
+      style_text:'end',
+      color:"rgba(10, 128, 106, 1)"
       
     },
     {
-      header: '24/7 technical support',
-      p: 'We strive to provide a comfortable and enjoyable shopping experience for our customers, where they can explore and purchase our products with ease, and in case of any questions or problems, our support team is always ready to help you and provide quick solutions.'
-      ,img:cs
+      header: '24/7 Purchasing',
+      p:"Our products are available for purchase throughout the day without any opening or closing dates. You will not miss any opportunity to purchase when you register in our application."
+      ,img:hour,
+      style:"rtl",
+      style_dir:"rtl",
+      mirror:"scaleX(1)",
+      style_text:'start',
+      color:"rgba(223, 144, 25, 1)"
     },
   ];
-  const ServicesData = [
-    {tag:t("Extensive marketing"),
-     header:"The makers of the application make your bridge to the world of creativity and craftsmanship in the Emirates",
-     p:"We market your products effectively to reach a wider audience using advanced strategies to attract potential customers. We also care about providing attractive and creative content that highlights the beauty and uniqueness of our products.",
-     points:["All social media platforms", "Appears on the home page of the site", "Control panel to display statistics"],
-     style:"rtl",
-     style_dir:"rtl",
-     mirror:"scaleX(1)",
-     style_text:'start',
-     color:"rgba(136, 5, 13, 1)"
-    },
-    {tag:t('Various payment options'),
-     header:"The makers of the application make your bridge to the world of creativity and craftsmanship in the Emirates",
-     p:"We are keen to provide diverse and secure payment options to our customers. We also offer innovative and reliable payment interfaces that include options such as payment via credit cards, direct debit, and bank transfer.",
-     points:["All social media platforms", "Appears on the home page of the site", "Control panel to display statistics"],
-     style:"ltr",
-     style_dir:"rtl",
-     style_align:"right",
-     mirror:"scaleX(-1)",
-     style_text:'end',
-     color:"rgba(10, 128, 106, 1)"
-    },
-    {tag: "24/7 technical support",
-     header:"The makers of the application make your bridge to the world of creativity and craftsmanship in the Emirates",
-     p:"We strive to provide a comfortable and enjoyable shopping experience for our customers, where they can explore and purchase our products with ease, and in case of any questions or problems, our support team is always ready to help you and provide quick solutions.",
-     points:["All social media platforms", "Appears on the home page of the site", "Control panel to display statistics"],
-     style:"rtl",
-     style_dir:"rtl",
-     mirror:"scaleX(1)",
-     style_text:'start',
-     color:"rgba(223, 144, 25, 1)"
-    },
-    {tag:`${t('Shipment tracking')}`,
-     header:"The makers of the application make your bridge to the world of creativity and craftsmanship in the Emirates",
-     p:"The application allows customers to easily track shipments. Once the order is shipped, customers are provided with tracking information to know the status of the shipment and its current location. This feature allows customers to follow the product’s journey until it reaches their destination.",
-     points:["All social media platforms", "Appears on the home page of the site", "Control panel to display statistics"],
-     style:"rtl",
-     style_dir:"rtl",
-     mirror:"scaleX(1)",
-     style_text:'start',
-     color:"rgba(223, 144, 25, 1)"
-    },
-  ]
   const articale_ads = [
     {title:"Sona3 is the best e-commerce platform in the UAE", date:"May 11, 2023", section:"E-Commerce",image:"", views:"40,5840 Views"},
     {title:"Sona3 is the best e-commerce platform in the UAE", date:"May 11, 2023", section:"E-Commerce",image:"", views:"40,5840 Views"},
@@ -337,6 +429,6 @@ export default function Data() {
     {title:"Sona3 is the best e-commerce platform in the UAE", image:""},
   ]
   return (
-    {customerData, sellerData, ServicesData, articale_ads, May_Like_Articles}
+    {customerData, sellerData, articale_ads, May_Like_Articles}
   )
 }

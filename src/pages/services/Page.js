@@ -3,10 +3,8 @@ import useApi from '../../components/Loading/LoadingApi'
 import style from './style.module.css'
 import s_line from './../../assets/s_line.png'
 import h_line from './../../assets/h_line.png'
-import stcs from './../../assets/stcs.png'
 import { useTranslation } from 'react-i18next';
 import { Button } from 'antd'
-import { CheckOutlined } from '@ant-design/icons'
 import Faqs from '../home/sections/Faqs'
 import Data from '../../DummyData/Data'
 import EndBanner from './../home/sections/EndBanner';
@@ -14,7 +12,7 @@ import BreadCrumb from './../../components/Layout/BreadCrumb';
 
 export default function Services() {
 useApi(600)
-const{sellerData, customerData, ServicesData} = Data()
+const{sellerData, customerData} = Data()
 const[data, setData] = useState(sellerData)
 const[serviceType, setServiceType] = useState('sellers')
 const{t,i18n} = useTranslation()
@@ -39,24 +37,19 @@ useEffect(() => {const handler = (e) => setMatches( e.matches ); window.matchMed
         </div>
       </div>
       <div className={style.Cards} >
-        {ServicesData.map((items,key)=>
+        {data.map((items,key)=>
           <div className={style.Card} style={{direction:`${items.style}`}} data-aos={key>0 ? 'zoom-in-up' : ''} data-aos-duration="1000" data-aos-offset="0">
              <div className={style.Card_Text} style={{textAlign:i18n.language==="en" ? "start" : `${items.style_text}`, direction:i18n.language==="en" ? "ltr" : `${items.style}`}}>
                <div className={style.header_content}>
                 <div className={style.header_text}>
-                  <div className={style.Card_Tag} style={{color:`${items.color}`}} >{t(`${items.tag}`)}</div>
-                  <div className={style.Card_h}>{t(`${items.header}`)}</div>
+                  <div className={style.Card_Tag} style={{color:`${items.color}`}} >{t(`${items.header}`)}</div>
                 </div>
-                {!matches && <img className={style.stcs_image} style={{transform:`${items.mirror}`}} src={stcs} alt="stcs" />}
+                {!matches && <img className={style.stcs_image} style={{transform:`${items.mirror}`}} src={items.img} alt="stcs" />}
                </div>
-               
                <div className={style.Card_p}>{t(`${items.p}`)}</div>
-               {items.points.map((point,p)=>
-                  <div className={style.Card_Points} style={{color:`${items.color}`, direction:i18n.language==="en" ? "ltr" :`rtl`, textAlign: i18n.language==="en" ? "start" : `${items?.style_align}`}} ><CheckOutlined className={style.Card_Points_Icon}/>{t(`${point}`)}</div>
-               )}
-               <Button id={style.More_Btn} style={{background:`${items.color}`}}>{t("More Details")}</Button>
+               <Button onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} id={style.More_Btn} style={{background:`${items.color}`}}>{t("More Details")}</Button>
              </div>
-             {matches && <img className={style.stcs_image} style={{transform:`${items.mirror}`}} src={stcs} alt="stcs" />}
+             {matches && <img className={style.stcs_image} style={{transform:`${items.mirror}`}} src={items.img} alt="stcs" />}
            </div>
         )}
         <Faqs/>

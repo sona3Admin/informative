@@ -105,7 +105,7 @@ const {articale_ads} = Data()
                 <p className={style.ad_card_p}>{t("OR")}</p>
                 <p className={style.ad_card_p_border}></p>
               </div>
-              <Button id={style.ad_card_btn}>{t(" Subscribe Now ")}</Button>
+              <Button onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} id={style.ad_card_btn}>{t(" Subscribe Now ")}</Button>
             </div>
             <div>
               <Header1 classname={style.header_secondary} text={"Popular articles 🔥"}/>

@@ -7,6 +7,7 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
 import Data from '../../../DummyData/Data';
 import Header3 from './../../../common/Header3';
+import Header1 from './../../../common/Header1';
 export default function Services() {
   const{sellerData, customerData} = Data()
   const[serviceType, setServiceType] = useState('sellers')
@@ -17,10 +18,10 @@ export default function Services() {
     <div className={style.section}>
       <div className={style.Header} data-aos="flip-up" data-aos-duration="1000">
         <img className={style.s_line} src={s_line} alt="Who we are"  data-aos="fade-right" data-aos-duration="2000"/>
-          <h1 className={style.h1}>{t("Our Services")}</h1>
+          <Header1 classname={style.h1} text={"Our Services"}/>
         <img className={style.s_line} src={s_line} alt="Who we are"  data-aos="fade-left" data-aos-duration="2000"/>
       </div>
-      <Header3 classname={style.p} dataAos={"fade-up"} text="The makers of the application make your bridge to the world of creativity and craftsmanship in the Emirates"/>
+      {/* <Header3 classname={style.p} dataAos={"fade-up"} text="The makers of the application make your bridge to the world of creativity and craftsmanship in the Emirates"/> */}
       <div className={style.buttons}>
         <Button className={ serviceType === "sellers" ? style.button_active : style.button } onClick={()=>{setServiceType("sellers"); setData(sellerData)}} >{t("Sellers")}</Button>
         <Button className={ serviceType === "customers" ? style.button_active : style.button } onClick={()=>{setServiceType("customers");setData(customerData)}} >{t("Customers")}</Button>
@@ -29,7 +30,7 @@ export default function Services() {
       {data.map((item, key) => (
           <div className={style.card} key={key} data-aos="flip-left" data-aos-duration="1500">
             <img className={style.card_icon} src={item.img} alt="bag" />
-            <h1 className={style.card_h1}>{t(`${item.header}`)}</h1>
+            <Header1 classname={style.card_h1} text={item.header}/>
             <div className={style.card_p}>{t(`${item.p}`)}</div>
             <Button style={{boxShadow:"none"}} onClick={()=>navigate(`/services`)} className={style.Card_Btn}>{t('Learn More')}<FaArrowLeft style={{ transform: i18n.language === 'en' ? 'rotate(180deg)' : 'rotate(0deg)' }} /></Button>
           </div>

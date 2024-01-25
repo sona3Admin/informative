@@ -8,6 +8,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import '@splidejs/splide/css';
 import Header3 from './../../../common/Header3';
+import Header1 from '../../../common/Header1'
 export default function News() {
   const{t, i18n} = useTranslation()
   const splideRef = useRef(null);
@@ -34,7 +35,7 @@ export default function News() {
      
       <div className={style.Header} data-aos="flip-up" data-aos-duration="2000">
         <img className={style.s_line} src={s_line} alt="Sona3 News" data-aos="fade-right" data-aos-duration="2000"/>
-          <h1 className={style.h1}>{t("Sona3 News")}</h1>
+          <Header1 classname={style.h1} text={"Sona3 News"}/>
         <img className={style.s_line} src={s_line} alt="Sona3 News" data-aos="fade-left" data-aos-duration="2000"/>
       </div>
       <div className={style.cards}>

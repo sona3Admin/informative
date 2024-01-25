@@ -10,7 +10,7 @@ import { CheckOutlined, CloseOutlined } from '@ant-design/icons'
 import { convertToArabicNumeral } from '../../utils/functions'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css';
-import { AllPackages } from '../../DummyData/Data'
+import { Packages } from '../../DummyData/Data'
 import EndBanner from './../home/sections/EndBanner';
 import BreadCrumb from './../../components/Layout/BreadCrumb';
 
@@ -59,8 +59,8 @@ useEffect(() => {
         {/* Start of Cards */}
      {matches && <div className={style.cards} >
 
-        {AllPackages.map((items,key)=>
-        <div className={style.card} id={items?.Special ? style.Best : ""}>
+     {Packages.map((items,key)=>
+        <div className={style.card} id={items?.name === "Basic" ? style.Best : ""}>
             <h1 className={style.card_h1}>{t(`${items.name}`)}</h1>
             <div className={style.card_p}>{t(`${items.p}`)}</div>
             <div className={style.pricing_content} >
@@ -68,18 +68,36 @@ useEffect(() => {
                 <Button id={style.save_btn}>{t("Save")}{convertToArabicNumeral(items.discount)}%</Button>
                 {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(items.originalPrice)} {t("AED")}</div>}
               </div>
-              <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{ items.price === 0 ? (i18n.language === 'en' ? "Zero" :"صفر") : convertToArabicNumeral(items.price)} {t("AED")}</span><span className={style.month}>/{t("month")}</span></div>
-              <Button id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
+              <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(items.price)} {t("AED")}</span><span className={style.month}>/{t("month")}</span></div>
+              <Button onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
             </div>
-            <div className={style.features_container}>
-              <h2>{t("Best features")}</h2>
+            <div className={`${style.features_container}`}>
+              <h2 className={style.h2}>{t("Subscription")}</h2>
               {items.features.map((item,index)=>
               <>
                 <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
               </>
               )}
-              <h2>{t("Marketing")}</h2>
+              <h2 className={style.h2}>{t("Marketing")}</h2>
               {items.marketing.map((item,index)=>
+              <>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+              </>
+              )}
+              <h2 className={style.h2}>{t("Shipping and packaging advantages")}</h2>
+              {items.shipping.map((item,index)=>
+              <>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+              </>
+              )}
+              <h2 className={style.h2}>{t("Management")}</h2>
+              {items.management.map((item,index)=>
+              <>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+              </>
+              )}
+              <h2 className={style.h2}>{t("Advanced")}</h2>
+              {items.advanced.map((item,index)=>
               <>
                 <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
               </>
@@ -92,30 +110,32 @@ useEffect(() => {
 
   {!matches &&
       <Splide  aria-label="My Favorite Images" className="splide"
-       ref={splideRef}
-        options={ {
-            start:0,
-            rewind : false,
-            width  : '100%',
-            gap    : '1rem',
-            perPage: 3,
-            direction: i18n.language === 'en' ? 'ltr' : 'rtl',
-            //lazyLoad: 'nearby',
-            //drag   : 'free',
-            focus  : 'center',
-            //type:'loop',
-            breakpoints: {
-              1024: { perPage: 3,padding:{left:i18n.language === 'en' ? '2rem' : '0rem',right: i18n.language === 'ar' ?'2rem':'0rem'}},
-              767: { perPage: 1,padding:{left:i18n.language === 'en' ? '2rem' : '0rem',right: i18n.language === 'ar' ?'2rem':'0rem'} },
-              640: { perPage: 1,padding:{left:i18n.language === 'en' ? '2rem' : '0rem',right: i18n.language === 'ar' ?'2rem':'0rem'} },
-              },
-          }
-        }
-        >
-          {AllPackages.map((items,key)=>
+      ref={splideRef}
+      style={{ overflow: 'hidden' }} 
+      options={ {
+       start:0,
+       rewind: false,
+       width: '100%',
+       gap: '1rem',
+       arrows:false,
+       perPage: 4,
+       focus  : 'center',
+       direction: i18n.language === 'en' ? 'ltr' : 'rtl',
+       //lazyLoad: 'nearby',
+       //drag   : 'free',
+       //type:'loop',
+       breakpoints: {
+         1500: { perPage: 3, arrows:true, padding:'20px' },
+         850: { perPage: 2, arrows:true, padding:'20px' },
+         640: { perPage: 1, arrows:true, padding:'20px' },
+         },
+     }
+       }
+       >
+          {Packages.map((items,key)=>
 
           <SplideSlide >
-        <div className={style.card} id={items?.Special ? style.Best : ""}>
+          <div className={style.card} id={items?.name === "Basic" ? style.Best : ""}>
             <h1 className={style.card_h1}>{t(`${items.name}`)}</h1>
             <div className={style.card_p}>{t(`${items.p}`)}</div>
             <div className={style.pricing_content}>
@@ -124,17 +144,35 @@ useEffect(() => {
                 {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(items.originalPrice)} {t("AED")}</div>}
               </div>
               <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{ items.price === 0 ? (i18n.language === 'en' ? "Zero" :"صفر") : convertToArabicNumeral(items.price)} {t("AED")}</span><span className={style.month}>/{t("month")}</span></div>
-              <Button id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
+              <Button onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
             </div>
-            <div className={style.features_container}>
-              <h2>{t("Best features")}</h2>
+            <div className={`${style.features_container}`}>
+              <h2 className={style.h2}>{t("Subscription")}</h2>
               {items.features.map((item,index)=>
               <>
                 <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
               </>
               )}
-              <h2>{t("Marketing")}</h2>
+              <h2 className={style.h2}>{t("Marketing")}</h2>
               {items.marketing.map((item,index)=>
+              <>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+              </>
+              )}
+              <h2 className={style.h2}>{t("Shipping and packaging advantages")}</h2>
+              {items.shipping.map((item,index)=>
+              <>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+              </>
+              )}
+              <h2 className={style.h2}>{t("Management")}</h2>
+              {items.management.map((item,index)=>
+              <>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+              </>
+              )}
+              <h2 className={style.h2}>{t("Advanced")}</h2>
+              {items.advanced.map((item,index)=>
               <>
                 <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
               </>

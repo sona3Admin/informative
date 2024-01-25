@@ -41,7 +41,7 @@ export default function Pricing() {
      {matches && <div className={style.cards} >
 
         {Packages.map((items,key)=>
-        <div className={style.card} id={items?.Special ? style.Best : ""}>
+        <div className={style.card} id={items?.name === "Basic" ? style.Best : ""}>
             <h1 className={style.card_h1}>{t(`${items.name}`)}</h1>
             <div className={style.card_p}>{t(`${items.p}`)}</div>
             <div className={style.pricing_content} >
@@ -52,15 +52,33 @@ export default function Pricing() {
               <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(items.price)} {t("AED")}</span><span className={style.month}>/{t("month")}</span></div>
               <Button onClick={()=>{navigate('/pricing')}} id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
             </div>
-            <div className={style.features_container}>
-              <h2>{t("Best features")}</h2>
+            <div className={`${style.features_container} ${style.features_container_home}`}>
+              <h2 className={style.h2}>{t("Subscription")}</h2>
               {items.features.map((item,index)=>
               <>
                 <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
               </>
               )}
-              <h2>{t("Marketing")}</h2>
+              <h2 className={style.h2}>{t("Marketing")}</h2>
               {items.marketing.map((item,index)=>
+              <>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+              </>
+              )}
+              <h2 className={style.h2}>{t("Shipping and packaging advantages")}</h2>
+              {items.shipping.map((item,index)=>
+              <>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+              </>
+              )}
+              <h2 className={style.h2}>{t("Management")}</h2>
+              {items.management.map((item,index)=>
+              <>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+              </>
+              )}
+              <h2 className={style.h2}>{t("Advanced")}</h2>
+              {items.advanced.map((item,index)=>
               <>
                 <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
               </>
@@ -82,23 +100,23 @@ export default function Pricing() {
         width: '100%',
         gap: '1rem',
         arrows:false,
-        perPage: 3,
+        perPage: 4,
         focus  : 'center',
         direction: i18n.language === 'en' ? 'ltr' : 'rtl',
         //lazyLoad: 'nearby',
         //drag   : 'free',
         //type:'loop',
         breakpoints: {
-          767: { perPage: 1, arrows:true, },
-          640: { perPage: 1, arrows:true, },
+          1500: { perPage: 3, arrows:true, padding:'20px' },
+          850: { perPage: 2, arrows:true, padding:'20px' },
+          640: { perPage: 1, arrows:true, padding:'20px' },
           },
       }
         }
         >
           {Packages.map((items,key)=>
-
           <SplideSlide >
-        <div className={style.card} id={items?.Special ? style.Best : ""}>
+          <div className={style.card} id={items?.name === "Basic" ? style.Best : ""}>
             <h1 className={style.card_h1}>{t(`${items.name}`)}</h1>
             <div className={style.card_p}>{t(`${items.p}`)}</div>
             <div className={style.pricing_content}>
@@ -109,15 +127,33 @@ export default function Pricing() {
               <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(items.price)} {t("AED")}</span><span className={style.month}>/{t("month")}</span></div>
               <Button onClick={()=>{navigate('/pricing')}} id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
             </div>
-            <div className={style.features_container}>
-              <h2>{t("Best features")}</h2>
+            <div className={`${style.features_container} ${style.features_container_home}`}>
+              <h2 className={style.h2}>{t("Subscription")}</h2>
               {items.features.map((item,index)=>
               <>
                 <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
               </>
               )}
-              <h2>{t("Marketing")}</h2>
+              <h2 className={style.h2}>{t("Marketing")}</h2>
               {items.marketing.map((item,index)=>
+              <>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+              </>
+              )}
+              <h2 className={style.h2}>{t("Shipping and packaging advantages")}</h2>
+              {items.shipping.map((item,index)=>
+              <>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+              </>
+              )}
+              <h2 className={style.h2}>{t("Management")}</h2>
+              {items.management.map((item,index)=>
+              <>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+              </>
+              )}
+              <h2 className={style.h2}>{t("Advanced")}</h2>
+              {items.advanced.map((item,index)=>
               <>
                 <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
               </>

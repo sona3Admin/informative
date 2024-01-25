@@ -54,15 +54,15 @@
 .line{
     display: flex;
     align-items: center;
-    gap: 0.5vw;
     border-radius: 10px;
     padding: 40px;
-    margin: -10px;
-    width: 55vw;
+    width: 80%;
     margin-bottom: 10px;
     margin-top: 10px;
     cursor: pointer;
-    gap: 5%;
+    gap: 2%;
+    min-height: 80px;
+    max-height: 10px;
 }
 .line:hover{
     transition: all 0.3s ease-in-out;
@@ -70,6 +70,7 @@
 }
 .line_text{
     font-size: 1.2rem;
+    text-align: start;
 }
 .line_text_bold{
     font-weight: bolder;
@@ -92,11 +93,18 @@
     transition: all 0.3s ease-in-out;
 }
 .cards{
-    display: block;
-    margin: 50% auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    width: max-content;
+    padding: 150px;
+    padding-top: 50px;
+}
+.p{
+    font-size: 0.97rem;
+}
+.message_content{
+    display: flex;
+    gap: 4%;
+    padding: 100px;
+    padding-top: 0;
+    margin-top: -80px;
 }
 .message{
     text-align: center;
@@ -119,42 +127,114 @@
     color: var(--red);
 }
 .message_p{
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-.statistics{
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 150px;
-}
-.statistics_h{
     font-size: 1.5rem;
-    font-weight: bolder;
-    margin-bottom: 30px;
-}
-.statistics_cards{
-    display: flex;
-    justify-content: center;
-    gap: 2%;
-}
-.statistics_card{
-    padding: 30px;
-    border-radius: 15px;
-    width: 16%;
-    font-size: 1.6rem;
-    color: white;
-    font-weight: bolder;
-}
-.card_name{
-    font-size: 1.1rem;
-    font-weight: lighter;
-}
-.card_number{
-    font-size: 2.5rem;
-    font-weight: bolder;
+    margin-top: -20px;
 }
 
+.Goals_Container{
+    margin: 100px;
+    background: #F7F7F7;
+    margin-top: 0;
+    padding: 30px;
+    border-radius: 12px;
+}
+.goal_card{
+    padding: 40px;
+    box-shadow: 0px 5px 5px -2px #a8a8a8;
+    max-height: 90px;
+    min-height: 90px;
+    border-radius: 10px;
+    margin: 10px;
+    background: white;
+    margin-bottom: 40px;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+.goal_image{
+    width: 50%;
+    height: 8vh;
+    object-fit: scale-down;
+}
+.goal_text{
+    width: max-content;
+    text-align: start;
+}
+.goals_header_container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2%;
+    margin-bottom: 50px;
+}
+.goals_header{
+    font-size: 2.5rem;
+}
+.points_header_h{
+    font-size: 2.5rem;
+}
+.Points_Container{
+    margin: 200px;
+    margin-top: 0;
+}
+.point_card{
+    display: flex;
+    gap: 1%;
+    font-size: 1.2rem;
+    margin: 20px;
+}
+
+.point_check_icon{
+    width: max-content;
+    height: max-content;
+    background: #D9D9D9;
+    color: #0A806A;
+    border-radius: 90px;
+    border: none;
+    padding: 6px;
+    font-size: 0.8rem;
+}
+.point_text{
+    width: 450px;
+    text-align: start;
+}
+
+@media screen  and (max-width:1200px){
+    .cards{
+        padding: 50px;
+        padding-top: 50px;
+    }
+    .message_content{
+        padding: 50px;
+    }
+    .Goals_Container{
+        margin: 10px;
+    }
+    .Points_Container {
+        margin: 100px;
+        margin-top: 0;
+    }
+}
 @media screen  and (max-width:1000px){
+    .Points_Container {
+        margin: 0px;
+    }
+    .point_card {
+        justify-content: center;
+    }
+    .message_h {
+        font-size: 1.5rem;
+        margin-top: 0px;
+    }
+    .message_p {
+        margin-top: 0px;
+        font-size: 1rem;
+    }
+    .cards{
+        padding: 0px;
+        padding-top: 0px;
+    }
     .h3_ {
         width: 80%;
         font-size: 2.2rem;
@@ -175,6 +255,24 @@
         font-size: 1rem;
     }
 }
+@media screen  and (max-width:850px){
+    .s_line{
+        object-fit: scale-down;
+        width: 8%;
+        transform: scale(1.5);
+    }
+    .points_header_h{
+        font-size: 1.3rem;
+        width: 100%;
+        text-align: center;
+    }
+    .message {
+        padding: 10px;
+    }
+    .message_p {
+        margin-top: -20px;
+    }
+}
 @media screen  and (max-width:750px){
     .statistics_card{
         width: 25%;
@@ -182,8 +280,26 @@
         padding-right: 5px;
         font-size: 1.2rem;
     }
+    .message_content {
+        padding: 15px;
+        margin-top: 0px;
+    }
 }
 @media screen  and (max-width:540px){
+    .Goals_Container{
+        padding: 0px;
+    }
+    .goal_card{
+        padding: 10px;
+        max-height: 120px;
+        width: 70%;
+    }
+    .goal_text {
+         width: 100%; 
+    }
+    .message {
+        margin-top: 10px;
+    }
     .line {
         width: 90vw;
         padding-left: 10px;

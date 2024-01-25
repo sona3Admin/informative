@@ -25,7 +25,7 @@ const{t} = useTranslation()
         </div>
         <div className={style.Control_Container}>
           <div onClick={()=>{window.open(`https://play.google.com/store/`, '_blank')}} className={style.Download_App}>{t("Download App")}</div>
-          <Button id={style.Register_Btn}>{t("Register Now")}</Button>
+          <Button onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} id={style.Register_Btn}>{t("Register Now")}</Button>
           <LangDropDown/>
         </div>
     </div>
