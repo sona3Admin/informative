@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom';
 import { Packages } from '../../../DummyData/Data';
 import Header3 from './../../../common/Header3';
 import Header1 from './../../../common/Header1';
+import CustomButton from './../../../common/CustomButton';
 export default function Pricing() {
   const {t,i18n} = useTranslation()
   const navigate = useNavigate()
@@ -50,7 +51,7 @@ export default function Pricing() {
                 {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(items.originalPrice_month)} {t("AED")}</div>}
               </div>
               <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(items.price_month)} {t("AED")}</span><span className={style.month}>/{t("month")}</span></div>
-              <Button onClick={()=>{navigate('/pricing')}} id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
+              <CustomButton onClick={()=>{navigate("/pricing")}} id={style.subscribe_btn} text={"Subscribe Now"}/>
             </div>
             <div className={`${style.features_container} ${style.features_container_home}`}>
               <h2 className={style.h2}>{t("Subscription")}</h2>
@@ -125,7 +126,7 @@ export default function Pricing() {
                 {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(items.originalPrice_month)} {t("AED")}</div>}
               </div>
               <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(items.price_month)} {t("AED")}</span><span className={style.month}>/{t("month")}</span></div>
-              <Button onClick={()=>{navigate('/pricing')}} id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
+              <CustomButton onClick={()=>{navigate("/pricing")}} id={style.subscribe_btn} text={"Subscribe Now"}/>
             </div>
             <div className={`${style.features_container} ${style.features_container_home}`}>
               <h2 className={style.h2}>{t("Subscription")}</h2>

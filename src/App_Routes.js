@@ -39,11 +39,11 @@ export default function App_Routes() {
           <Route exact path="/about" element={<About/>} loading />
           <Route exact path="/pricing" element={<Pricing/>} loading />
           <Route element={<Layout/>}>
-                <Route  path="/blog" element={<Index />} />
-                <Route  path="/blog/e-commerce" element={<Ecommerce />} />
-                <Route  path="/blog/crafts" element={<Crafts />} />
-                <Route  path="/blog/jobs" element={<Jobs />} />
-                <Route  path="/blog/sona3-app" element={<Sona3App />} />
+                <Route  path="/blog" element={<Index />} loading/>
+                <Route  path="/blog/e-commerce" element={<Ecommerce />} loading/>
+                <Route  path="/blog/crafts" element={<Crafts />} loading/>
+                <Route  path="/blog/jobs" element={<Jobs />} loading/>
+                <Route  path="/blog/sona3-app" element={<Sona3App />} loading/>
           </Route>
           <Route exact path="/blog/:section/:id" element={<Post />} />
           <Route exact path="/support" element={<Support/>} loading />

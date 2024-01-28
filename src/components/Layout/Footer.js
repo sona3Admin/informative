@@ -1,17 +1,33 @@
 import React,{useState, useEffect} from 'react'
-import style from './styles/footer.module.css'
+import * as Yup from 'yup';
+import { Field, Form, Formik, ErrorMessage } from 'formik';
+import { Input, Button } from 'antd'; // Replace with your actual component library
 import facebook from '../../assets/facebook.png'
 import twitter from '../../assets/twitter.png'
 import instagram from '../../assets/footer_instagram.svg'
 import snap from '../../assets/snap.png'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
-import { Button } from 'antd'
 import Header1 from './../../common/Header1';
+import style from './styles/footer.module.css'
 export default function Footer() {
 const {t,i18n} = useTranslation()
 const[matches,setMatches] = useState(window.matchMedia("(min-width: 1100px)").matches)
 useEffect(() => {const handler = (e) => setMatches( e.matches ); window.matchMedia("(min-width: 1100px)").addListener(handler);},[])
+const validationSchema = Yup.object().shape({
+  email: Yup.string().email(t('Invalid email')).required(t('Email is required')),
+});
+
+const initialValues = {
+  email: '',
+};
+
+const handleSubmit = (values, {resetForm}) => {
+  // Handle registration logic here
+  console.log('Registration form submitted with values:', values);
+  alert("تم التسجيل سوف يتم اخبارك باخر الاخبار")
+  resetForm()
+};
   return (
     <div className={style.Footer}>
       <div className={style.Content_1}>
@@ -19,10 +35,21 @@ useEffect(() => {const handler = (e) => setMatches( e.matches ); window.matchMed
         <div className={style.sec_2}>
           <div><span>{t("Register in")}</span><span style={{color:"rgba(136, 5, 13, 1)", fontWeight:"bolder", fontFamily:i18n.language === 'en' ? "JosefinSans" : "GE_SS_bold"}}> {t("Newsletter")} </span><span>{t("to recieve all news of")}</span></div>
           <div>{t("handcarfts in Emirates")}</div>
-          <div className={style.Form}>
-            <input className={style.input} value="" name="email" placeholder={t("Email Address")} style={{direction:i18n.language === 'en' ? 'ltr' : 'rtl'}}/>
-            <Button id={style.Register}>{t("Register")}</Button>
-          </div>
+          <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
+            <Form className={style.Form}>
+              <Field
+                className={style.input}
+                name="email"
+                placeholder={t('Email Address')}
+                style={{ direction: i18n.language === 'en' ? 'ltr' : 'rtl' }}
+                as={Input}
+              />
+              <ErrorMessage name="email" component="div" className={style.error} />
+              <Button htmlType="submit" id={style.Register}>
+                {t('Register')}
+              </Button>
+            </Form>
+        </Formik>
         </div>
 
         <div className={style.sec_1}>

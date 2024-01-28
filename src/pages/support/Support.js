@@ -1,8 +1,8 @@
 import React from 'react';
-import { useFormik } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useTranslation } from 'react-i18next';
-import { Button, Form, Input } from 'antd';
+import { Button, Input } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import { NavLink } from 'react-router-dom';
 import style from './style.module.css';
@@ -11,9 +11,11 @@ import h_line from './../../assets/h_line.png';
 import facebook from '../../assets/facebook_solid.png';
 import twitter from '../../assets/twitter_solid.png';
 import instagram from '../../assets/instagram_solid.png';
-import snap from '../../assets/pintrest_solid.png';
+import tiktok from '../../assets/tiktok.png';
+import linkedin from '../../assets/in.png';
 import mail from '../../assets/mail_solid.png';
 import phone from '../../assets/phone_solid.png';
+import snap_2 from '../../assets/snap_2.png';
 import gps from '../../assets/gps_solid.png';
 import BreadCrumb from './../../components/Layout/BreadCrumb';
 import useApi from '../../components/Loading/LoadingApi';
@@ -21,27 +23,28 @@ import useApi from '../../components/Loading/LoadingApi';
 const Support = () => {
   useApi(600);
   const { t, i18n } = useTranslation();
-
-  const formik = useFormik({
-    initialValues: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      note: '',
-    },
-    validationSchema: Yup.object({
-      firstName: Yup.string().required(t('First name is required')),
-      lastName: Yup.string().required(t('Last name is required')),
-      email: Yup.string().email(t('Invalid email address')).required(t('Email is required')),
-      phone: Yup.string().required(t('Phone number is required')),
-      note: Yup.string().required(t('Message is required')),
-    }),
-    onSubmit: values => {
-      // Handle form submission logic here
-      console.log(values);
-    },
+  const validationSchema = Yup.object().shape({
+    firstName: Yup.string().required(t('First name is required')),
+    lastName: Yup.string().required(t('Last name is required')),
+    email: Yup.string().email(t('Invalid email')).required(t('Email is required')),
+    phone: Yup.string().required(t('Phone number is required')),
+    note: Yup.string().required(t('Message is required')),
   });
+
+  const initialValues = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    note: '',
+  };
+
+  const handleSubmit = (values,{resetForm}) => {
+    // Handle form submission logic here
+    alert(t('سوف نتواصل معك قريبا'));
+    resetForm()
+    // You can add additional logic here, such as sending the form data to a server
+  };
 
   return (
     <div>
@@ -58,33 +61,65 @@ const Support = () => {
         )}
       </div>
       <div className={style.container}>
-        <Form className={style.Form} style={{ direction: i18n.language === 'en' ? 'ltr' : 'rtl' }} onSubmit={formik.handleSubmit}>
-          <div className={style.clientName_div}>
-            <div className={style.Input_info}>
-              <label className={style.Label}>{t('firstName')}</label>
-              <Input name="firstName" placeholder={t('firstName')} className={style.Input} onChange={formik.handleChange} value={formik.values.firstName} />
-            </div>
-            <div className={style.Input_info}>
-              <label className={style.Label}>{t('lastName')}</label>
-              <Input name="lastName" placeholder={t('lastName')} className={style.Input} onChange={formik.handleChange} value={formik.values.lastName} />
-            </div>
+      <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
+      <Form className={style.Form} style={{ direction: i18n.language === 'en' ? 'ltr' : 'rtl' }}>
+        <div className={style.clientName_div}>
+          <div className={style.Input_info}>
+            <label className={style.Label}>{t('firstName')}</label>
+            <Field
+              name="firstName"
+              placeholder={t('firstName')}
+              className={style.Input}
+              as={Input}
+            />
+            <ErrorMessage name="firstName" component="div" className={style.error} />
           </div>
           <div className={style.Input_info}>
-            <label className={style.Label}>{t('E-mail')}</label>
-            <Input name="email" placeholder={t('E-mail')} className={style.Input} onChange={formik.handleChange} value={formik.values.email} />
+            <label className={style.Label}>{t('lastName')}</label>
+            <Field
+              name="lastName"
+              placeholder={t('lastName')}
+              className={style.Input}
+              as={Input}
+            />
+            <ErrorMessage name="lastName" component="div" className={style.error} />
           </div>
-          <div className={style.Input_info}>
-            <label className={style.Label}>{t('Phone')}</label>
-            <Input name="phone" placeholder={t('Phone')} className={style.Input} onChange={formik.handleChange} value={formik.values.phone} />
-          </div>
-          <div className={style.Input_info}>
-            <label className={style.Label}>{t('Message')}</label>
-            <TextArea name="note" placeholder={t('Type your message here...')} onChange={formik.handleChange} value={formik.values.note} />
-          </div>
-          <Button id={style.send_btn} type="submit" onClick={()=>{alert("سيتم التواصل معك قريبا")}}>
-            {t('Send')}
-          </Button>
-        </Form>
+        </div>
+        <div className={style.Input_info}>
+          <label className={style.Label}>{t('E-mail')}</label>
+          <Field
+            name="email"
+            placeholder={t('E-mail')}
+            className={style.Input}
+            as={Input}
+          />
+          <ErrorMessage name="email" component="div" className={style.error} />
+        </div>
+        <div className={style.Input_info}>
+          <label className={style.Label}>{t('Phone')}</label>
+          <Field
+            name="phone"
+            placeholder={t('Phone')}
+            className={style.Input}
+            as={Input}
+          />
+          <ErrorMessage name="phone" component="div" className={style.error} />
+        </div>
+        <div className={style.Input_info}>
+          <label className={style.Label}>{t('Message')}</label>
+          <Field
+            name="note"
+            placeholder={t('Type your message here...')}
+            className={style.Input}
+            as={TextArea}
+          />
+          <ErrorMessage name="note" component="div" className={style.error} />
+        </div>
+        <Button id={style.send_btn} htmlType="submit">
+          {t('Send')}
+        </Button>
+      </Form>
+    </Formik>
         <div className={style.Data_Container}>
           <div className={style.Data}>
             <div className={style.Data_header}>{t('Communication Data')}</div>
@@ -95,8 +130,9 @@ const Support = () => {
                 <NavLink ><img onClick={()=>{window.open(`https://www.facebook.com/sona3app`, '_blank')}} src={facebook} className={style.social_icon} alt="1"/></NavLink>
                 <NavLink ><img onClick={()=>{window.open(`https://twitter.com/Sona3app`, '_blank')}} src={twitter} className={style.social_icon} alt="2"/></NavLink>
                 <NavLink ><img onClick={()=>{window.open(`https://www.instagram.com/sona3app/`, '_blank')}} src={instagram} className={style.social_icon} alt="3"/></NavLink>
-                <NavLink ><img onClick={()=>{window.open(`https://www.snapchat.com/add/sona3app`, '_blank')}} src={snap} className={style.social_icon} alt="4"/></NavLink>
-                <NavLink ><img onClick={()=>{window.open(`https://www.linkedin.com/company/sona3app/`, '_blank')}} src={snap} className={style.social_icon} alt="4"/></NavLink>
+                <NavLink ><img onClick={()=>{window.open(`https://www.snapchat.com/add/sona3app`, '_blank')}} src={snap_2} className={style.social_icon} alt="4"/></NavLink>
+                <NavLink ><img onClick={()=>{window.open(`https://www.linkedin.com/company/sona3app/`, '_blank')}} src={linkedin} className={style.social_icon} alt="4"/></NavLink>
+                <NavLink ><img onClick={()=>{window.open(`https://www.tiktok.com/@sona3app`, '_blank')}} src={tiktok} className={style.social_icon} alt="4"/></NavLink>
             </div>
           </div>
           <div className={style.Map}>

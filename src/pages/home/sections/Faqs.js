@@ -7,6 +7,7 @@ import s_line from '../../../assets/s_line.png'
 import { useNavigate } from 'react-router-dom';
 import { common_q } from '../../../DummyData/Data';
 import Header1 from './../../../common/Header1';
+import CustomButton from './../../../common/CustomButton';
 const { Panel } = Collapse;
 export default function Faqs() {
   const{t} = useTranslation()
@@ -31,7 +32,7 @@ export default function Faqs() {
         </Panel>
       ))}
     </Collapse>
-    <Button onClick={()=>{navigate("/faqs")}} id={style.Button} data-aos="fade-up">{t("More Questions")}</Button>
+    <CustomButton onClick={()=>{navigate("/faqs")}} DataAos="fade-up" id={style.Button} text={"More Questions"}/>
     </div>
   )
 }

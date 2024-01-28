@@ -1,6 +1,5 @@
 import React,{useEffect,useRef} from 'react'
 import style from './styles/news.module.css'
-import sand from '../../../assets/sand.png'
 import { convertToArabicNumeral } from '../../../utils/functions'
 import { useTranslation } from 'react-i18next'
 import s_line from '../../../assets/s_line.png'
@@ -10,8 +9,10 @@ import '@splidejs/splide/css';
 import Header3 from './../../../common/Header3';
 import Header1 from '../../../common/Header1'
 import { news } from '../../../DummyData/Data'
+import { useNavigate } from 'react-router-dom'
 export default function News() {
   const{t, i18n} = useTranslation()
+  const navigate = useNavigate()
   const splideRef = useRef(null);
   useEffect(() => {
     const splideInstance = splideRef.current?.splide;
@@ -56,15 +57,12 @@ export default function News() {
                   padding: 0,
                 },
               },
-          
-                
           }
-        
         }
         >
         {news.map((item,i) => (   
                 <SplideSlide >
-                    <div className={style.card}  key={i} id={i} >
+                    <div className={style.card}  key={i} id={i} onClick={()=>{navigate("/blog/E-Commerce/1")}}>
                       <LazyLoadImage  className={style.image_h_line} src={item.image}  effect="blur" />
                       <div className={style.card_text_content}>
                         <p className={style.date} >{convertToArabicNumeral(7)} {t("Nov")} {convertToArabicNumeral(2023)}</p>

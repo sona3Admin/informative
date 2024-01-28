@@ -12,6 +12,7 @@ import { Button } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import Header3 from './../../../common/Header3';
 import Header1 from './../../../common/Header1';
+import CustomButton from './../../../common/CustomButton';
 
 export default function About() {
   const {t} = useTranslation()
@@ -61,7 +62,7 @@ export default function About() {
                 <p>{t("Empowering and assisting crafts owners, small businesses, and talented people of determination, and becoming the link between the manufacturer and the buyer.")}</p>
             </div>
           </div>
-          <Button onClick={()=>{navigate("/about")}} id={style.Button} >{t("More Details")}</Button>
+          <CustomButton onClick={()=>{navigate("/about")}} id={style.Button} text={"More Details"}/>
       </div>
     </div>
   )

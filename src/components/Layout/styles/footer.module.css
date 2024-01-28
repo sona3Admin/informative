@@ -44,14 +44,18 @@
     border-radius: 20px;
     align-self: center;
     padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 50px;
     font-size: 1.6rem;
     background: rgba(229, 188, 124, 1);
     color: rgba(0, 0, 0, 1);
     font-weight: bold;
+    
 }
 .Form{
     display: inline-grid;
+    padding-top: 20px;
 }
 .input{
     width: 25vw;
@@ -98,7 +102,12 @@
     width: 40%;
     text-align: end;
 }
-
+.error{
+    font-size: 1rem;
+    color: darkred;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
 
 @media screen  and (max-width:1250px){
     .sec_2{

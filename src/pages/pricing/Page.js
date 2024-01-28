@@ -13,6 +13,7 @@ import '@splidejs/splide/css';
 import { Packages } from '../../DummyData/Data'
 import EndBanner from './../home/sections/EndBanner';
 import BreadCrumb from './../../components/Layout/BreadCrumb';
+import CustomButton from './../../common/CustomButton';
 
 export default function Pricing() {
 useApi(600)
@@ -65,11 +66,11 @@ useEffect(() => {
             <div className={style.card_p}>{t(`${items.p}`)}</div>
             <div className={style.pricing_content} >
               <div className={style.flex_pricing_div}>
-                <Button id={style.save_btn}>{t("Save")}{convertToArabicNumeral(items.discount)}%</Button>
+                <Button id={style.save_btn} style={{fontFamily:i18n.language === 'en' ? "JosefinSans" :"GE_SS_bold"}}>{t("Save")}{items.discount}%</Button>
                 {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(Type ==='monthly' ? items.originalPrice_month : items.originalPrice_year)} {t("AED")}</div>}
               </div>
               <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(Type ==='monthly' ? items.price_month : items.price_year)} {t("AED")}</span><span className={style.month}>/{Type ==='monthly' ? t("month") : t("yearly")}</span></div>
-              <Button onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
+              <CustomButton onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}}  id={style.subscribe_btn} text={"Subscribe Now"}/>
             </div>
             <div className={`${style.features_container}`}>
               <h2 className={style.h2}>{t("Subscription")}</h2>
@@ -144,7 +145,7 @@ useEffect(() => {
                 {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(Type ==='monthly' ? items.originalPrice_month : items.originalPrice_year)} {t("AED")}</div>}
               </div>
               <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(Type ==='monthly' ? items.price_month : items.price_year)} {t("AED")}</span><span className={style.month}>/{Type ==='monthly' ? t("month") : t("yearly")}</span></div>
-              <Button onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
+              <CustomButton onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}}  id={style.subscribe_btn} text={"Subscribe Now"}/>
             </div>
             <div className={`${style.features_container}`}>
               <h2 className={style.h2}>{t("Subscription")}</h2>

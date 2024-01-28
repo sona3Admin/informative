@@ -9,7 +9,7 @@ export default function Navbar() {
 const location = useLocation()
 const navigate = useNavigate()
 const activeClassName = (pathname)=> location.pathname === pathname ? style.Navbar_li_active : style.Navbar_li 
-const{t} = useTranslation()
+const{t, i18n} = useTranslation()
 
   return (
     <div className={style.Navbar}>
@@ -25,8 +25,8 @@ const{t} = useTranslation()
         </div>
         <div className={style.Control_Container}>
           <div onClick={()=>{window.open(`https://play.google.com/store/`, '_blank')}} className={style.Download_App}>{t("Download App")}</div>
-          <Button onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} id={style.ShopNow_Btn}>{t("Shop")}</Button>
-          <Button onClick={()=>{window.open(`https://shop.sona3.ae/my-account/`, '_blank')}} id={style.Register_Btn}>{t("Register Now")}</Button>
+          <Button style={{fontFamily: i18n.language === 'en' ? 'JosefinSans' : 'GE_SS_light',}} onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} id={style.ShopNow_Btn}>{t("Shop")}</Button>
+          <Button style={{fontFamily: i18n.language === 'en' ? 'JosefinSans' : 'GE_SS_light',}} onClick={()=>{window.open(`https://shop.sona3.ae/my-account/`, '_blank')}} id={style.Register_Btn}>{t("Register Now")}</Button>
           <LangDropDown/>
         </div>
     </div>
