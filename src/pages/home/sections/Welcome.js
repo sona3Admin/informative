@@ -24,7 +24,7 @@ const navigate = useNavigate()
                 {/* <div className={style.p}>{t("We provide integrated services for all types of events. Our services include platform cleaning and preparation and support services")}</div> */}
                 {/* <div className={style.p}>{t("We provide integrated services for all types of events. Our services include cleaning and preparing platforms")}</div> */}
                 <div className={style.Buttons_flex}>
-                    <CustomButton onClick={()=>{window.open(`https://shop.sona3.ae/my-account/`, '_blank')}} id={style.Seller_Btn} text={"Register now as seller and join us"}/>
+                    <CustomButton onClick={()=>{window.open(`https://shop.sona3.ae/my-account/`, '_blank')}} id={style.Seller_Btn} text={"Register as seller and join us"}/>
                     <CustomButton onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} id={style.Customer_Btn} text={"Go Shopping"}/>
                 </div>
                 <div className={style.line_data}>
