@@ -5,14 +5,30 @@ import cs from './../assets/cs.png'
 import car from './../assets/car.png'
 import pay from './../assets/pay.png'
 import hour from './../assets/24.png'
-import target from './../assets/target.png'
+import _1 from './../assets/blog/1.jpg'
+import _2 from './../assets/blog/2.jpg'
+import _3 from './../assets/blog/3.jpg'
+import _4 from './../assets/blog/4.jpg'
+import _5 from './../assets/blog/5.jpg'
+import _6 from './../assets/blog/6.jpg'
+import _7 from './../assets/blog/7.jpg'
+import _8 from './../assets/blog/8.jpg'
+import _9 from './../assets/blog/9.jpg'
+import _10 from './../assets/blog/10.jpg'
+import _11 from './../assets/blog/11.jpg'
+import _12 from './../assets/blog/12.jpg'
+import _13 from './../assets/blog/13.jpg'
+import _14 from './../assets/blog/14.jpg'
+import _15 from './../assets/blog/15.jpg'
 import { convertToArabicNumeral } from './../utils/functions';
 export const Packages = [
     {
       name:"Free",
        p:"Level up with more power and enhanced features",
-       originalPrice:0,
-        price:0,
+        originalPrice_month:0,
+        price_month:0,
+        originalPrice_year:0,
+        price_year:0,
         discount:100,
         features:[
           {status:false,name:"Number of products displayed"},
@@ -46,16 +62,18 @@ export const Packages = [
           {status:false,name:"Recover deleted data"},
           {status:false,name:"Training courses"},
           {status:true,name:"Technical Support"},
-          {status:false,name:"E-marketing service providers"},
-          {status:false,name:"Product photography service providers"},
-          {status:false,name:"Product packaging service providers"},
+          {status:false,name:"E-marketing service providers" , plus:true},
+          {status:false,name:"Product photography service providers", plus:true},
+          {status:false,name:"Product packaging service providers", plus:true},
         ],
        },
     {
       name:"Basic",
        p:"Level up with more power and enhanced features",
-       originalPrice:1000,
-        price:1500,
+        originalPrice_month:425,
+        price_month:250,
+        originalPrice_year:3250,
+        price_year:2500,
         discount:30,
         features:[
           {status:false,name:"Number of products displayed"},
@@ -89,16 +107,18 @@ export const Packages = [
           {status:false,name:"Recover deleted data"},
           {status:false,name:"Training courses"},
           {status:true,name:"Technical Support"},
-          {status:false,name:"E-marketing service providers"},
-          {status:false,name:"Product photography service providers"},
-          {status:false,name:"Product packaging service providers"},
+          {status:false,name:"E-marketing service providers", plus:true},
+          {status:false,name:"Product photography service providers", plus:true},
+          {status:false,name:"Product packaging service providers", plus:true},
         ],
        },
     {
       name:"Professional",
        p:"Level up with more power and enhanced features",
-       originalPrice:2000,
-        price:2500,
+       originalPrice_month:650,
+        price_month:500,
+        originalPrice_year:6500,
+        price_year:5000,
         discount:30,
         features:[
           {status:true,name:"Number of products displayed"},
@@ -132,16 +152,18 @@ export const Packages = [
           {status:false,name:"Recover deleted data"},
           {status:true,name:"Training courses"},
           {status:true,name:"Technical Support"},
-          {status:false,name:"E-marketing service providers"},
-          {status:false,name:"Product photography service providers"},
-          {status:false,name:"Product packaging service providers"},
+          {status:false,name:"E-marketing service providers", plus:true},
+          {status:false,name:"Product photography service providers", plus:true},
+          {status:false,name:"Product packaging service providers", plus:true},
         ],
        },
     {
       name:"Advanced",
        p:"Level up with more power and enhanced features",
-       originalPrice:3000,
-        price:3500,
+        originalPrice_month:1350,
+        price_month:1000,
+        originalPrice_year:13000,
+        price_year:10000,
         discount:30,
         features:[
           {status:true,name:"Number of products displayed"},
@@ -175,119 +197,13 @@ export const Packages = [
           {status:false,name:"Recover deleted data"},
           {status:true,name:"Training courses"},
           {status:true,name:"Technical Support"},
-          {status:false,name:"E-marketing service providers"},
-          {status:false,name:"Product photography service providers"},
-          {status:false,name:"Product packaging service providers"},
+          {status:false,name:"E-marketing service providers", plus:true},
+          {status:false,name:"Product photography service providers", plus:true},
+          {status:false,name:"Product packaging service providers", plus:true},
         ],
        },
     
   ];
-
-
-
-
-  export const AllPackages = [
-    {
-      name:"Free",
-       p:"Level up with more power and enhanced features",
-       originalPrice:0,
-        price:0,
-        discount:100,
-        features:[
-          {status:false,name:"Daily appearance on the homepage"},
-          {status:false,name:"Free marketing on social media"},
-          {status:false,name:"Professional product photography"},
-          {status:false,name:"Priority in customer support"},
-          {status:false,name:"Increased visibility in search engines"},
-          {status:false,name:"Increased visibility in search engines"},
-
-        ],
-        marketing:[
-          {status:false,name:"Daily appearance on the homepage"},
-          {status:false,name:"Free marketing on social media"},
-          {status:false,name:"Professional product photography"},
-          {status:false,name:"Priority in customer support"},
-          {status:false,name:"Increased visibility in search engines"},
-          {status:false,name:"Increased visibility in search engines"},
-        ],
-       },
-    {
-      name:"Special package",
-       p:"Level up with more power and enhanced features",
-       originalPrice:100,
-        price:650,
-        discount:40,
-        features:[
-          {status:false,name:"Daily appearance on the homepage"},
-          {status:false,name:"Free marketing on social media"},
-          {status:false,name:"Professional product photography"},
-          {status:false,name:"Priority in customer support"},
-          {status:false,name:"Increased visibility in search engines"},
-          {status:false,name:"Increased visibility in search engines"},
-
-        ],
-        marketing:[
-          {status:false,name:"Daily appearance on the homepage"},
-          {status:false,name:"Free marketing on social media"},
-          {status:false,name:"Professional product photography"},
-          {status:false,name:"Priority in customer support"},
-          {status:false,name:"Increased visibility in search engines"},
-          {status:false,name:"Increased visibility in search engines"},
-        ],
-       },
-    {
-      name:"Best Selling",
-       p:"Level up with more power and enhanced features",
-       originalPrice:1200,
-        price:900,
-        discount:60,
-        features:[
-          {status:false,name:"Daily appearance on the homepage"},
-          {status:false,name:"Free marketing on social media"},
-          {status:false,name:"Professional product photography"},
-          {status:false,name:"Priority in customer support"},
-          {status:false,name:"Increased visibility in search engines"},
-          {status:false,name:"Increased visibility in search engines"},
-
-        ],
-        marketing:[
-          {status:false,name:"Daily appearance on the homepage"},
-          {status:false,name:"Free marketing on social media"},
-          {status:false,name:"Professional product photography"},
-          {status:false,name:"Priority in customer support"},
-          {status:false,name:"Increased visibility in search engines"},
-          {status:false,name:"Increased visibility in search engines"},
-        ],
-        Special:false
-       },
-    {
-      name:"Premium package",
-       p:"Level up with more power and enhanced features",
-       originalPrice:1800,
-        price:1500,
-        discount:30,
-        features:[
-          {status:false,name:"Daily appearance on the homepage"},
-          {status:false,name:"Free marketing on social media"},
-          {status:false,name:"Professional product photography"},
-          {status:false,name:"Priority in customer support"},
-          {status:false,name:"Increased visibility in search engines"},
-          {status:false,name:"Increased visibility in search engines"},
-
-        ],
-        marketing:[
-          {status:false,name:"Daily appearance on the homepage"},
-          {status:false,name:"Free marketing on social media"},
-          {status:false,name:"Professional product photography"},
-          {status:false,name:"Priority in customer support"},
-          {status:false,name:"Increased visibility in search engines"},
-          {status:false,name:"Increased visibility in search engines"},
-        ],
-       }
-  ];
-
-
-
 
 
   export const common_q =  [
@@ -360,7 +276,7 @@ export default function Data() {
     {
       header: 'Various payment options',
       p: 'We are keen to provide diverse and secure payment options to our customers. We also offer innovative and reliable payment interfaces that include options such as payment via credit cards, direct debit, and bank transfers.'
-      ,img:target,
+      ,img:pay,
       style:"ltr",
       style_dir:"rtl",
       style_align:"right",
@@ -432,3 +348,22 @@ export default function Data() {
     {customerData, sellerData, articale_ads, May_Like_Articles}
   )
 }
+
+
+export const news = [
+  { text: "Arrangement pottery elements workshop", date: "", image: _1 },
+  { text: "Beautiful handmade ceramics pottery concept", date: "", image: _3 },
+  { text: "Carpenter working on a piece of wood - High view", date: "", image: _4 },
+  { text: "Caucasian woman sewing homemade textile pattern indoors - Generated by AI", date: "", image: _5 },
+  { text: "Close-up female African American hands making clay pottery", date: "", image: _6 },
+  { text: "Colorful needlework embroidery flowers as background", date: "", image: _7 },
+  { text: "From various angles, traditional bamboo bag webbing is decorated with Bohemian aesthetic", date: "", image: _8 },
+  { text: "Giving final touches to artwork", date: "", image: _9 },
+  { text: "Person using macramé technique", date: "", image: _10 },
+  { text: "Punch needle embroidery pillow DIY - Closeup skilled hands crafting cozy woolen masterpiece", date: "", image: _11 },
+  { text: "Top view hands knitting", date: "", image: _12 },
+  { text: "Turkish rug tapestry colorful symbol - Indigenous textile industry, generated by AI", date: "", image: _13 },
+  { text: "Unfinished jug", date: "", image: _14 },
+  { text: "Bag with rope it", date: "", image: _2 },
+  { text: "Young adult organizing their knitting products", date: "", image: _15 },
+];

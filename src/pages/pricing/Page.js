@@ -6,7 +6,7 @@ import h_line from './../../assets/h_line.png'
 import arrow from './../../assets/arrow.png'
 import { useTranslation } from 'react-i18next'
 import { Button } from 'antd'
-import { CheckOutlined, CloseOutlined } from '@ant-design/icons'
+import { CheckOutlined, CloseOutlined, PlusOutlined } from '@ant-design/icons'
 import { convertToArabicNumeral } from '../../utils/functions'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css';
@@ -66,9 +66,9 @@ useEffect(() => {
             <div className={style.pricing_content} >
               <div className={style.flex_pricing_div}>
                 <Button id={style.save_btn}>{t("Save")}{convertToArabicNumeral(items.discount)}%</Button>
-                {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(items.originalPrice)} {t("AED")}</div>}
+                {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(Type ==='monthly' ? items.originalPrice_month : items.originalPrice_year)} {t("AED")}</div>}
               </div>
-              <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(items.price)} {t("AED")}</span><span className={style.month}>/{t("month")}</span></div>
+              <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(Type ==='monthly' ? items.price_month : items.price_year)} {t("AED")}</span><span className={style.month}>/{Type ==='monthly' ? t("month") : t("yearly")}</span></div>
               <Button onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
             </div>
             <div className={`${style.features_container}`}>
@@ -99,7 +99,7 @@ useEffect(() => {
               <h2 className={style.h2}>{t("Advanced")}</h2>
               {items.advanced.map((item,index)=>
               <>
-                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : item.plus ? <PlusOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/>  }{t(`${item.name}`)}</div>
               </>
               )}
             </div>
@@ -141,9 +141,9 @@ useEffect(() => {
             <div className={style.pricing_content}>
               <div className={style.flex_pricing_div}>
                 <Button id={style.save_btn}>{t("Save")}{convertToArabicNumeral(items.discount)}%</Button>
-                {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(items.originalPrice)} {t("AED")}</div>}
+                {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(Type ==='monthly' ? items.originalPrice_month : items.originalPrice_year)} {t("AED")}</div>}
               </div>
-              <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{ items.price === 0 ? (i18n.language === 'en' ? "Zero" :"صفر") : convertToArabicNumeral(items.price)} {t("AED")}</span><span className={style.month}>/{t("month")}</span></div>
+              <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(Type ==='monthly' ? items.price_month : items.price_year)} {t("AED")}</span><span className={style.month}>/{Type ==='monthly' ? t("month") : t("yearly")}</span></div>
               <Button onClick={()=>{window.open(`https://shop.sona3.ae/`, '_blank')}} id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
             </div>
             <div className={`${style.features_container}`}>
@@ -174,7 +174,7 @@ useEffect(() => {
               <h2 className={style.h2}>{t("Advanced")}</h2>
               {items.advanced.map((item,index)=>
               <>
-                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : item.plus ? <PlusOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/>  }{t(`${item.name}`)}</div>
               </>
               )}
             </div>

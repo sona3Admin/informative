@@ -9,6 +9,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import '@splidejs/splide/css';
 import Header3 from './../../../common/Header3';
 import Header1 from '../../../common/Header1'
+import { news } from '../../../DummyData/Data'
 export default function News() {
   const{t, i18n} = useTranslation()
   const splideRef = useRef(null);
@@ -20,16 +21,6 @@ export default function News() {
     }
   }, [i18n.language]);
 
-  const news= [
-    {text:"ways to earn passive income online", date:"" , image:'person.png'},
-    {text:"ways to earn passive income online", date:"" , image:'person.png'},
-    {text:"ways to earn passive income online", date:"" , image:'person.png'},
-    {text:"ways to earn passive income online", date:"" , image:'person.png'},
-    {text:"ways to earn passive income online", date:"" , image:'person.png'},
-    {text:"ways to earn passive income online", date:"" , image:'person.png'},
-    {text:"ways to earn passive income online", date:"" , image:'person.png'},
-    {text:"ways to earn passive income online", date:"" , image:'person.png'},
-];
   return (
     <div className={style.section}>
      
@@ -74,7 +65,7 @@ export default function News() {
         {news.map((item,i) => (   
                 <SplideSlide >
                     <div className={style.card}  key={i} id={i} >
-                      <LazyLoadImage  className={style.image_h_line} src={sand}  effect="blur" />
+                      <LazyLoadImage  className={style.image_h_line} src={item.image}  effect="blur" />
                       <div className={style.card_text_content}>
                         <p className={style.date} >{convertToArabicNumeral(7)} {t("Nov")} {convertToArabicNumeral(2023)}</p>
                         <Header3 classname={style.text} text={item.text}/>

@@ -4,7 +4,7 @@ import h_line from '../../../assets/h_line.png'
 import style from './styles/pricing.module.css'
 import { useTranslation } from 'react-i18next';
 import { Button } from 'antd';
-import { CheckOutlined, CloseOutlined, ArrowDownOutlined } from '@ant-design/icons'
+import { CheckOutlined, CloseOutlined, ArrowDownOutlined, PlusOutlined } from '@ant-design/icons'
 import { convertToArabicNumeral } from '../../../utils/functions'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css';
@@ -47,9 +47,9 @@ export default function Pricing() {
             <div className={style.pricing_content} >
               <div className={style.flex_pricing_div}>
                 <Button id={style.save_btn}>{t("Save")}{convertToArabicNumeral(items.discount)}%</Button>
-                {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(items.originalPrice)} {t("AED")}</div>}
+                {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(items.originalPrice_month)} {t("AED")}</div>}
               </div>
-              <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(items.price)} {t("AED")}</span><span className={style.month}>/{t("month")}</span></div>
+              <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(items.price_month)} {t("AED")}</span><span className={style.month}>/{t("month")}</span></div>
               <Button onClick={()=>{navigate('/pricing')}} id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
             </div>
             <div className={`${style.features_container} ${style.features_container_home}`}>
@@ -80,7 +80,7 @@ export default function Pricing() {
               <h2 className={style.h2}>{t("Advanced")}</h2>
               {items.advanced.map((item,index)=>
               <>
-                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : item.plus ? <PlusOutlined style={{color:"#88050d"}}/> : <CloseOutlined style={{color:"#88050d"}}/>  }{t(`${item.name}`)}</div>
               </>
               )}
             </div>
@@ -122,9 +122,9 @@ export default function Pricing() {
             <div className={style.pricing_content}>
               <div className={style.flex_pricing_div}>
                 <Button id={style.save_btn}>{t("Save")}{convertToArabicNumeral(items.discount)}%</Button>
-                {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(items.originalPrice)} {t("AED")}</div>}
+                {items.discount!==100 && <div className={style.hash_price}>{convertToArabicNumeral(items.originalPrice_month)} {t("AED")}</div>}
               </div>
-              <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(items.price)} {t("AED")}</span><span className={style.month}>/{t("month")}</span></div>
+              <div className={style.main_price}><span style={{fontWeight:'bolder'}}>{convertToArabicNumeral(items.price_month)} {t("AED")}</span><span className={style.month}>/{t("month")}</span></div>
               <Button onClick={()=>{navigate('/pricing')}} id={style.subscribe_btn}>{t("Subscribe Now")}</Button>
             </div>
             <div className={`${style.features_container} ${style.features_container_home}`}>
@@ -155,7 +155,7 @@ export default function Pricing() {
               <h2 className={style.h2}>{t("Advanced")}</h2>
               {items.advanced.map((item,index)=>
               <>
-                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : <CloseOutlined style={{color:"#88050d"}}/> }{t(`${item.name}`)}</div>
+                <div className={style.feature_li} >{item.status ? <CheckOutlined style={{color:"green"}}/> : item.plus ? <PlusOutlined style={{color:"#88050d"}}/> : <CloseOutlined style={{color:"#88050d"}}/>  }{t(`${item.name}`)}</div>
               </>
               )}
             </div>
