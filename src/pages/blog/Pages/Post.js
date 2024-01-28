@@ -6,7 +6,7 @@ import google from '../../../assets/google_store.png'
 import app from '../../../assets/app_store.png'
 import facebook from '../../../assets/facebook.svg'
 import instagram from '../../../assets/instagram.svg'
-import twitter from '../../../assets/twitter_solid.png'
+import twitter from '../../../assets/twitter.svg'
 import { useTranslation } from 'react-i18next';
 import { Button, } from 'antd';
 import Data from './../../../DummyData/Data';
@@ -95,7 +95,7 @@ const {articale_ads} = Data()
                   <div className={style.small_card_text}>{t("Type")}</div>
                 </div>
               </div>
-              <p className={style.ad_card_p}>{t("Download App Now")}</p>
+              <p className={style.ad_card_p} style={{marginBottom:'0px'}}>{t("Download App Now")}</p>
               <img onClick={()=>{window.open(`https://play.google.com/store/games?device=windows&pli=1`, '_blank')}} className={style.ad_download_img} src={google} alt='ad_download_img'/>
               <img onClick={()=>{window.open(`https://www.apple.com/store`, '_blank')}} className={style.ad_download_img} src={app} alt='ad_download_img'/>
               <div className={style.line_break}>
