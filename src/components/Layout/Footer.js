@@ -6,6 +6,8 @@ import facebook from '../../assets/facebook.png'
 import twitter from '../../assets/twitter.png'
 import instagram from '../../assets/footer_instagram.svg'
 import snap from '../../assets/snap.png'
+import tiktok from '../../assets/tiktok_footer.png'
+import linkedin from '../../assets/linkedin_footer.png'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import Header1 from './../../common/Header1';
@@ -60,6 +62,8 @@ const handleSubmit = (values, {resetForm}) => {
                 <NavLink ><img onClick={()=>{window.open(`https://twitter.com/Sona3app`, '_blank')}} src={twitter} className={style.img_link} alt="2"/></NavLink>
                 <NavLink ><img onClick={()=>{window.open(`https://www.instagram.com/sona3app/`, '_blank')}} src={instagram} className={style.img_link} alt="3"/></NavLink>
                 <NavLink ><img onClick={()=>{window.open(`https://www.snapchat.com/add/sona3app`, '_blank')}} src={snap} className={style.img_link} alt="4"/></NavLink>
+                <NavLink ><img onClick={()=>{window.open(`https://www.tiktok.com/@sona3app`, '_blank')}} src={tiktok} className={style.img_link} alt="5" style={{filter:"invert(1)", border:"solid 2px black"}}/></NavLink>
+                <NavLink ><img onClick={()=>{window.open(`https://www.linkedin.com/company/sona3app/`, '_blank')}} src={linkedin} className={style.img_link} alt="6" /></NavLink>
               </div>
         </div>
      
