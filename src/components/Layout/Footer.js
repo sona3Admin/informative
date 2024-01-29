@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import Header1 from './../../common/Header1';
 import style from './styles/footer.module.css'
+import { SwalAlert } from './../alert/SwalAlert';
 export default function Footer() {
 const {t,i18n} = useTranslation()
 const[matches,setMatches] = useState(window.matchMedia("(min-width: 1100px)").matches)
@@ -25,7 +26,7 @@ const initialValues = {
 const handleSubmit = (values, {resetForm}) => {
   // Handle registration logic here
   console.log('Registration form submitted with values:', values);
-  alert("تم التسجيل سوف يتم اخبارك باخر الاخبار")
+  SwalAlert({ text: t("You have registered successfully, you will recieve latest news"), status: true })
   resetForm()
 };
   return (

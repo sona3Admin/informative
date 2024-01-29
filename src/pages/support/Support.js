@@ -19,6 +19,7 @@ import snap_2 from '../../assets/snap_2.png';
 import gps from '../../assets/gps_solid.png';
 import BreadCrumb from './../../components/Layout/BreadCrumb';
 import useApi from '../../components/Loading/LoadingApi';
+import { SwalAlert } from '../../components/alert/SwalAlert';
 
 const Support = () => {
   useApi(600);
@@ -41,7 +42,7 @@ const Support = () => {
 
   const handleSubmit = (values,{resetForm}) => {
     // Handle form submission logic here
-    alert(t('سوف نتواصل معك قريبا'));
+    SwalAlert({ text: t("We will be in touch with you soon"), status: true })
     resetForm()
     // You can add additional logic here, such as sending the form data to a server
   };

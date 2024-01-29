@@ -281,5 +281,9 @@
         "Name is required":"الاسم مطلوب",
         "Comment is required":"التعليق مطلوب",
         "I accept to":" أوافق علي ",
-        "Privacy & Policies":"الخصوصية والسياسات"
+        "Privacy & Policies":"الخصوصية والسياسات",
+        "Comment successfully sent":"تم ارسال تعليقك بنجاح'",
+        "You have registered successfully, you will recieve latest news":"تم التسجيل سوف يتم اخبارك باخر الاخبار",
+        "We will be in touch with you soon":"سوف نتواصل معك في اقرب وقت ممكن",
+        "Abu Dhabi":"أبو ظبي"
 }

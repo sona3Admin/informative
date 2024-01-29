@@ -7,6 +7,9 @@ import app from '../../../assets/app_store.png'
 import facebook from '../../../assets/facebook.svg'
 import instagram from '../../../assets/instagram.svg'
 import twitter from '../../../assets/twitter.svg'
+import snap from '../../../assets/snap.svg'
+import linkedin from '../../../assets/linkedin.svg'
+import tiktok from '../../../assets/tik.svg'
 import { useTranslation } from 'react-i18next';
 import { Button, } from 'antd';
 import Data from './../../../DummyData/Data';
@@ -141,7 +144,10 @@ const {articale_ads} = Data()
         <div className={style.social_links}>
           <img onClick={()=>{window.open(`https://www.facebook.com/sona3app`, '_blank')}} className={style.social_img} src={facebook} alt='facebook'/>
           <img onClick={()=>{window.open(`https://www.instagram.com/sona3app/`, '_blank')}} className={style.social_img} src={instagram} alt='instagram'/>
-          <img onClick={()=>{window.open(`https://www.snapchat.com/add/sona3app`, '_blank')}} className={style.social_img} src={twitter} alt='whatsapp'/>
+          <img onClick={()=>{window.open(`https://twitter.com/Sona3app`, '_blank')}} className={style.social_img} src={twitter} alt='twitter'/>
+          <img onClick={()=>{window.open(`https://www.snapchat.com/add/sona3app`, '_blank')}} className={style.social_img} src={snap} alt='snapchat'/>
+          <img onClick={()=>{window.open(`https://www.tiktok.com/@sona3app`, '_blank')}} className={style.social_img} src={tiktok} alt='tiktok'/>
+          <img onClick={()=>{window.open(`https://www.linkedin.com/company/sona3app/`, '_blank')}} className={style.social_img} src={linkedin} alt='linkedin'/>
         </div>       
         <CommentForm/>
       <h1 className={style.h1}>{t("Articles you may like")}</h1>

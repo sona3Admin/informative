@@ -54,6 +54,8 @@
     color: var(--red);
     font-size: 1rem;
     cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 #Register_Btn{
     background: var(--red);
@@ -103,16 +105,20 @@
         width: 5rem;
     }
     .Download_App {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
     }
     #Register_Btn {
         font-size: 0.85rem;
         margin-left: 2px; 
         margin-right: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     #ShopNow_Btn {
         font-size: 0.85rem;
         margin-left: 2px; 
         margin-right: 2px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }

@@ -5,6 +5,7 @@ import { Input, Checkbox, Button } from 'antd'; // Replace with your actual comp
 import TextArea from 'antd/es/input/TextArea'
 import { useTranslation } from 'react-i18next';
 import style from './style.module.css'
+import { SwalAlert } from './../../../../components/alert/SwalAlert';
 
 const CommentForm = () => {
   const {t} = useTranslation()
@@ -23,7 +24,7 @@ const CommentForm = () => {
   };
 
   const handleSubmit = (values, { resetForm }) => {
-    alert(t('تم ارسال تعليقك بنجاح'));
+    SwalAlert({ text: t("Comment successfully sent"), status: true })
     resetForm()
   };
 

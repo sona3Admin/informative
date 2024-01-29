@@ -1,0 +1,26 @@
+.SwalErrorStyle{
+    background: linear-gradient(45deg, #ff1100ba, #e91e637a);
+    color: white;
+}
+.SwalSuccessStyle{
+    color: #4CAF50;
+    display: grid;
+}
+
+
+h2#swal2-title {
+    font-size: 1.5rem;
+}
+
+
+.swal2-icon.swal2-error.swal2-icon-show{
+   background: white;
+   
+}
+
+
+@media screen and (max-width:650px) {
+    h2#swal2-title {
+        font-size: 1rem;
+    }
+}
